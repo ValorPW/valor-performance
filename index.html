@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor Performance & Wellness | Human Optimization</title>
+    <meta name="description" content="Veteran-owned precision nutrition, intentional training, and advanced recovery protocols for athletes and high-performers.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#111827',
+                        neon: '#39FF14',
+                        'neon-glow': 'rgba(57, 255, 20, 0.3)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .neon-text-glow {
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+        }
+        .neon-border-glow {
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+        }
+        .neon-button-glow:hover {
+            box-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
+        }
+        .grid-bg {
+            background-image: linear-gradient(rgba(57, 255, 20, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(57, 255, 20, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        .mobile-menu-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-dark text-slate-100 font-sans selection:bg-neon selection:text-dark">
+
+    <!-- Sticky Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-extrabold tracking-tighter text-white">VALOR<span class="text-neon">.</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#mission" class="text-sm font-medium hover:text-neon transition-colors">Mission</a>
+                    <a href="#method" class="text-sm font-medium hover:text-neon transition-colors">Method</a>
+                    <a href="#services" class="text-sm font-medium hover:text-neon transition-colors">Services</a>
+                    <button onclick="toggleModal()" class="bg-neon text-dark px-6 py-2.5 rounded-sm font-bold text-sm tracking-wide neon-button-glow transition-all uppercase">Book Now</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark border-b border-white/5 px-4 pt-2 pb-6 space-y-4">
+            <a href="#mission" class="block text-lg py-2 hover:text-neon">Mission</a>
+            <a href="#method" class="block text-lg py-2 hover:text-neon">Method</a>
+            <a href="#services" class="block text-lg py-2 hover:text-neon">Services</a>
+            <button onclick="toggleModal()" class="w-full bg-neon text-dark py-4 rounded-sm font-bold neon-button-glow uppercase">Book Consultation</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-30"></div>
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-neon/10 rounded-full blur-[120px]"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+            <div class="inline-block px-4 py-1 border border-neon/30 rounded-full text-neon text-xs font-bold tracking-widest uppercase mb-6 bg-neon/5">
+                Optimize Your Human Potential
+            </div>
+            <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight mb-6 text-white leading-none">
+                Achieve Full <br><span class="text-neon neon-text-glow">Human Optimization</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Veteran-Owned <span class="mx-2 text-neon/30">•</span> Precision Nutrition <span class="mx-2 text-neon/30">•</span> Intentional Training <span class="mx-2 text-neon/30">•</span> Advanced Recovery
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button onclick="toggleModal()" class="bg-neon text-dark px-10 py-5 rounded-sm font-black text-lg tracking-wider neon-button-glow transition-all uppercase">
+                    Book Your Consultation
+                </button>
+                <a href="#method" class="px-10 py-5 border border-white/10 rounded-sm font-bold text-lg hover:bg-white/5 transition-all uppercase">
+                    The VALOR Method
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission -->
+    <section id="mission" class="py-32 bg-dark/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="h-1 w-12 bg-neon"></div>
+                        <span class="text-neon font-bold tracking-widest uppercase text-sm">Our Mission</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-white leading-tight">
+                        Veterans Achieving <br>Lasting Optimization <br>& Recovery
+                    </h2>
+                </div>
+                <div class="space-y-6">
+                    <p class="text-xl text-slate-300 leading-relaxed">
+                        Although founded by a disabled U.S. veteran, Valor Performance & Wellness serves athletes, professionals, and everyday individuals seeking peak performance and longevity.
+                    </p>
+                    <p class="text-lg text-slate-400">
+                        We combine science-backed methods with personalized protocols to help you optimize body, mind, and performance through intentional, data-driven strategies.
+                    </p>
+                    <div class="pt-4 flex items-center gap-4">
+                        <div class="p-3 bg-white/5 rounded-lg border border-white/10">
+                            <svg class="w-8 h-8 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <span class="font-bold text-sm tracking-widest uppercase">Veteran Owned & Operated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The VALOR Method -->
+    <section id="method" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6">The VALOR Method</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">A personalized, non-cookie-cutter approach built on your unique biometrics and performance goals.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pillar 1 -->
+                <div class="p-8 border border-white/5 bg-white/[0.02] hover:border-neon/30 transition-all group">
+                    <div class="mb-6 text-neon group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.628.293a2 2 0 01-.815.171h-.436a2 2 0 01-.815-.171l-.628-.293a6 6 0 00-3.86-.517l-2.387.477a2 2 0 00-1.022.547l-1.16 1.16a2 2 0 000 2.828l1.16 1.16a2 2 0 001.022.547l2.387.477a6 6 0 003.86-.517l.628-.293a2 2 0 01.815-.171h.436a2 2 0 01.815.171l.628.293a6 6 0 003.86.517l2.387-.477a2 2 0 001.022-.547l1.16-1.16a2 2 0 000-2.828l-1.16-1.16z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Precision Metabolic Nutrition</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Fueling based on metabolic rate and biometric data for peak energy and body composition.</p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="p-8 border border-white/5 bg-white/[0.02] hover:border-neon/30 transition-all group">
+                    <div class="mb-6 text-neon group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Intentional Strength Training</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Systematic programming designed to build resilient systems and functional capacity.</p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="p-8 border border-white/5 bg-white/[0.02] hover:border-neon/30 transition-all group">
+                    <div class="mb-6 text-neon group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Lifestyle Optimization</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Mastering the margins: Sleep, stress management, and daily habits for longevity.</p>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="p-8 border border-white/5 bg-white/[0.02] hover:border-neon/30 transition-all group">
+                    <div class="mb-6 text-neon group-hover:scale-110 transition-transform duration-500">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Advanced Recovery Methods</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Utilizing cutting-edge science to accelerate repair and reset the nervous system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section id="services" class="py-32 bg-dark/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6">Our Services</h2>
+                    <p class="text-slate-400 text-lg">Integrated performance solutions tailored to your unique biological needs.</p>
+                </div>
+                <button onclick="toggleModal()" class="text-neon border border-neon/50 px-8 py-3 hover:bg-neon hover:text-dark transition-all font-bold uppercase tracking-widest text-xs">View All Protocols</button>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-dark border border-white/5 p-10 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-neon/5 -mr-12 -mt-12 rounded-full group-hover:bg-neon/20 transition-all duration-500"></div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Metabolic Precision Nutrition</h3>
+                    <ul class="space-y-4 mb-10 text-slate-400 text-sm">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Biometric Data Analysis</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Personalized Fueling Maps</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Nutrient Timing Protocols</li>
+                    </ul>
+                    <button onclick="toggleModal()" class="text-neon font-bold text-sm uppercase tracking-widest border-b-2 border-neon/20 hover:border-neon pb-1 transition-all">Book Now</button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-dark border border-white/5 p-10 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-neon/5 -mr-12 -mt-12 rounded-full group-hover:bg-neon/20 transition-all duration-500"></div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Lifestyle Optimization</h3>
+                    <ul class="space-y-4 mb-10 text-slate-400 text-sm">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Sleep Architecture Audit</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Circadian Rhythm Alignment</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Stress Management Systems</li>
+                    </ul>
+                    <button onclick="toggleModal()" class="text-neon font-bold text-sm uppercase tracking-widest border-b-2 border-neon/20 hover:border-neon pb-1 transition-all">Book Now</button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-dark border border-white/5 p-10 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-neon/5 -mr-12 -mt-12 rounded-full group-hover:bg-neon/20 transition-all duration-500"></div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Advanced Recovery</h3>
+                    <ul class="space-y-4 mb-10 text-slate-400 text-sm">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Red Light Therapy</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Infrared Sauna Protocols</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Cold Exposure / Ice Baths</li>
+                    </ul>
+                    <button onclick="toggleModal()" class="text-neon font-bold text-sm uppercase tracking-widest border-b-2 border-neon/20 hover:border-neon pb-1 transition-all">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-32 relative overflow-hidden">
+        <div class="absolute inset-0 bg-neon/5"></div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-8">Ready to Level Up?</h2>
+            <p class="text-slate-300 text-xl mb-12">Take the first step toward a data-driven transformation.</p>
+            <button onclick="toggleModal()" class="bg-neon text-dark px-12 py-6 rounded-sm font-black text-xl tracking-widest neon-button-glow transition-all uppercase">
+                Start Your Journey
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="lg:col-span-2">
+                    <span class="text-2xl font-extrabold tracking-tighter text-white mb-6 block">VALOR<span class="text-neon">.</span></span>
+                    <p class="text-slate-500 max-w-sm mb-8 leading-relaxed">
+                        Precision performance for those who demand more from themselves. Veteran founded, science-backed.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-slate-500 hover:text-neon transition-colors">
+                            <span class="sr-only">Instagram</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="text-slate-500 hover:text-neon transition-colors">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Navigation</h4>
+                    <ul class="space-y-4 text-slate-500 text-sm">
+                        <li><a href="#" class="hover:text-neon transition-colors">Home</a></li>
+                        <li><a href="#mission" class="hover:text-neon transition-colors">Mission</a></li>
+                        <li><a href="#method" class="hover:text-neon transition-colors">The Method</a></li>
+                        <li><a href="#services" class="hover:text-neon transition-colors">Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Legal</h4>
+                    <ul class="space-y-4 text-slate-500 text-sm">
+                        <li><a href="#" class="hover:text-neon transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-neon transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/5 pt-10">
+                <p class="text-slate-600 text-xs leading-relaxed italic">
+                    Valor Performance & Wellness is an educational company providing information on precision nutrition, lifestyle optimization, and recovery protocols. The content on this website is for informational and educational purposes only and is not intended as medical advice. Always consult with a qualified physician before beginning any new nutrition, training, or recovery program.
+                </p>
+                <div class="mt-8 flex justify-between items-center text-[10px] uppercase tracking-widest text-slate-700">
+                    <p>&copy; 2026 VALOR PERFORMANCE & WELLNESS. ALL RIGHTS RESERVED.</p>
+                    <p>DESIGNED FOR HUMAN OPTIMIZATION</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 z-[60] flex items-center justify-center hidden">
+        <div class="absolute inset-0 bg-dark/95 backdrop-blur-sm" onclick="toggleModal()"></div>
+        <div class="relative bg-dark border border-white/10 w-full max-w-lg mx-4 p-8 md:p-12 neon-border-glow">
+            <button onclick="toggleModal()" class="absolute top-4 right-4 text-slate-500 hover:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h2 class="text-3xl font-extrabold text-white mb-2">Book Consultation</h2>
+            <p class="text-slate-400 mb-8">Tell us about your goals. We'll reach out within 24 hours.</p>
+            
+            <form id="booking-form" class="space-y-4">
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">Full Name</label>
+                    <input type="text" required class="w-full bg-white/5 border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-neon transition-colors" placeholder="John Doe">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">Email Address</label>
+                    <input type="email" required class="w-full bg-white/5 border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-neon transition-colors" placeholder="john@example.com">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">What is your primary goal?</label>
+                    <select class="w-full bg-white/5 border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-neon transition-colors">
+                        <option class="bg-dark">Precision Nutrition</option>
+                        <option class="bg-dark">Strength Optimization</option>
+                        <option class="bg-dark">Lifestyle & Longevity</option>
+                        <option class="bg-dark">Recovery Protocols</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-neon text-dark py-4 font-black uppercase tracking-widest mt-6 neon-button-glow transition-all">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal Toggle
+        const modal = document.getElementById('booking-modal');
+        function toggleModal() {
+            modal.classList.toggle('hidden');
+            document.body.classList.toggle('mobile-menu-open');
+        }
+
+        // Form Submit Handler
+        document.getElementById('booking-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Consultation request received! We will be in touch soon.');
+            toggleModal();
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
