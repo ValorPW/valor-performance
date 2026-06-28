@@ -833,6 +833,213 @@
  .reveal-delay-2 { transition-delay: 0.2s; }
  .reveal-delay-3 { transition-delay: 0.3s; }
 
+ /* ══ INSIGHTS / EDUCATIONAL PAGE ═══════════════════════════════════════ */
+ .insights-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+ gap: 32px;
+ margin-bottom: 0;
+ }
+ .insight-card {
+ background: var(--card);
+ border: 1px solid var(--border);
+ border-radius: 2px;
+ overflow: hidden;
+ transition: var(--transition);
+ cursor: pointer;
+ }
+ .insight-card:hover {
+ border-color: var(--green);
+ box-shadow: 0 0 20px rgba(200, 244, 0, 0.1);
+ }
+ .insight-card-image {
+ width: 100%;
+ height: 200px;
+ background: linear-gradient(135deg, var(--dim) 0%, var(--card) 100%);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 64px;
+ overflow: hidden;
+ }
+ .insight-card-image img {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ }
+ .insight-card-content {
+ padding: 28px;
+ }
+ .insight-card-title {
+ font-family: var(--font-display);
+ font-size: 20px;
+ color: var(--white);
+ margin-bottom: 12px;
+ line-height: 1.2;
+ }
+ .insight-card-description {
+ font-size: 14px;
+ color: var(--silver);
+ margin-bottom: 16px;
+ line-height: 1.6;
+ }
+ .insight-card-link {
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ font-family: var(--font-mono);
+ font-size: 12px;
+ letter-spacing: 0.08em;
+ text-transform: uppercase;
+ color: var(--green);
+ font-weight: 600;
+ transition: var(--transition);
+ }
+ .insight-card-link:hover {
+ gap: 12px;
+ }
+ /* INSIGHT MODAL */
+ .insight-modal {
+ display: none;
+ position: fixed;
+ z-index: 1000;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(0, 0, 0, 0.95);
+ overflow-y: auto;
+ animation: fadeIn 0.3s ease;
+ }
+ .insight-modal.open { display: block; }
+ .insight-modal-content {
+ background: var(--black);
+ color: var(--white);
+ padding: 60px 0;
+ position: relative;
+ }
+ .insight-modal-header {
+ padding: 40px 24px;
+ border-bottom: 1px solid var(--border);
+ position: relative;
+ }
+ .insight-modal-close {
+ position: absolute;
+ top: 24px;
+ right: 24px;
+ font-size: 32px;
+ font-weight: bold;
+ color: var(--green);
+ cursor: pointer;
+ transition: var(--transition);
+ background: none;
+ border: none;
+ padding: 0;
+ width: 40px;
+ height: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ }
+ .insight-modal-close:hover {
+ color: var(--white);
+ transform: scale(1.2);
+ }
+ .insight-modal-header h2 {
+ font-family: var(--font-display);
+ font-size: 48px;
+ line-height: 1;
+ color: var(--white);
+ margin: 0;
+ }
+ .insight-modal-body {
+ max-width: 900px;
+ margin: 0 auto;
+ padding: 60px 24px;
+ }
+ .insight-modal-body h3 {
+ font-family: var(--font-display);
+ font-size: 28px;
+ color: var(--white);
+ margin: 36px 0 16px;
+ line-height: 1;
+ }
+ .insight-modal-body h4 {
+ font-family: var(--font-display);
+ font-size: 18px;
+ color: var(--green);
+ margin: 24px 0 12px;
+ }
+ .insight-modal-body p {
+ font-size: 15px;
+ line-height: 1.8;
+ color: var(--silver);
+ margin-bottom: 16px;
+ }
+ .insight-modal-body ul, .insight-modal-body ol {
+ margin-left: 24px;
+ margin-bottom: 16px;
+ }
+ .insight-modal-body li {
+ list-style: disc;
+ margin-bottom: 8px;
+ color: var(--silver);
+ font-size: 14px;
+ line-height: 1.6;
+ }
+ .insight-image {
+ width: 100%;
+ margin: 32px 0;
+ border: 1px solid var(--border);
+ border-radius: 2px;
+ overflow: hidden;
+ }
+ .insight-image img {
+ width: 100%;
+ height: auto;
+ display: block;
+ }
+ .insight-image-caption {
+ background: var(--card);
+ padding: 12px;
+ font-size: 12px;
+ color: var(--silver);
+ text-align: center;
+ }
+ .insight-highlight {
+ background: var(--green-dim);
+ border-left: 4px solid var(--green);
+ padding: 20px;
+ margin: 24px 0;
+ border-radius: 2px;
+ }
+ .insight-highlight strong {
+ color: var(--green);
+ }
+ .insight-disclaimer {
+ background: rgba(255, 74, 74, 0.05);
+ border-left: 4px solid #ff4a4a;
+ padding: 20px;
+ margin: 48px 0 0;
+ border-radius: 2px;
+ font-size: 13px;
+ color: var(--silver);
+ line-height: 1.6;
+ }
+ .insight-disclaimer strong {
+ color: #ff4a4a;
+ display: block;
+ margin-bottom: 8px;
+ }
+ @media (max-width: 768px) {
+ .insights-grid { gap: 24px; }
+ .insight-modal-header h2 { font-size: 32px; }
+ .insight-modal-body { padding: 40px 16px; }
+ .insight-modal-header { padding: 30px 16px; }
+ .insight-modal-close { top: 16px; right: 16px; }
+ .insight-modal-body h3 { font-size: 24px; }
+ }
+
  /* ── EVOLT 360 MODAL ────────────────────────────────────── */
  .evolt-modal {
  display: none;
@@ -1630,6 +1837,230 @@
 </style>
 
 ═══════════════════════════════════════════════════════ -->
+<!-- EDUCATIONAL INSIGHTS SECTION -->
+<section class="section" style="border-top: 1px solid var(--border);">
+ <div class="container">
+ <p class="label">Knowledge Base</p>
+ <h2 class="section__title" style="margin-bottom: 60px;">Educational Insights</h2>
+ <div class="insights-grid">
+ <div class="insight-card" onclick="openInsightModal('peptides')">
+ <div class="insight-card-image" style="background: linear-gradient(135deg, var(--green-dim) 0%, var(--dim) 100%);">🧬</div>
+ <div class="insight-card-content">
+ <h3 class="insight-card-title">Peptides? You've Heard About The Frenzy But What Are They Actually?</h3>
+ <p class="insight-card-description">Understanding peptides: classifications, mechanisms, and real science behind the buzz.</p>
+ <a class="insight-card-link">Learn More →</a>
+ </div>
+ </div>
+ <div class="insight-card" onclick="openInsightModal('nutrition-glps')">
+ <div class="insight-card-image" style="background: linear-gradient(135deg, var(--green-dim) 0%, var(--dim) 100%);">🍽️</div>
+ <div class="insight-card-content">
+ <h3 class="insight-card-title">Why Proper Nutrition Is Imperative On GLPs</h3>
+ <p class="insight-card-description">How nutrition amplifies GLP effectiveness, metabolic optimization, and dietary protocols.</p>
+ <a class="insight-card-link">Learn More →</a>
+ </div>
+ </div>
+ <div class="insight-card" onclick="openInsightModal('strength-training')">
+ <div class="insight-card-image" style="background: linear-gradient(135deg, var(--green-dim) 0%, var(--dim) 100%);">📋</div>
+ <div class="insight-card-content">
+ <h3 class="insight-card-title">Why Strength Training Is King</h3>
+ <p class="insight-card-description">Intentional strength training superiority, aging gracefully, and why resistance training is non-negotiable.</p>
+ <a class="insight-card-link">Learn More →</a>
+ </div>
+ </div>
+ <div class="insight-card" onclick="openInsightModal('visceral-fat')">
+ <div class="insight-card-image" style="background: linear-gradient(135deg, var(--green-dim) 0%, var(--dim) 100%);">💪</div>
+ <div class="insight-card-content">
+ <h3 class="insight-card-title">The Dangers Of Visceral Fat In Men</h3>
+ <p class="insight-card-description">How visceral fat blunts testosterone, creates estrogenic effects, and practical strategies to reverse it.</p>
+ <a class="insight-card-link">Learn More →</a>
+ </div>
+ </div>
+ <div class="insight-card" onclick="openInsightModal('veteran-health')">
+ <div class="insight-card-image" style="background: linear-gradient(135deg, var(--green-dim) 0%, var(--dim) 100%);">🏖️</div>
+ <div class="insight-card-content">
+ <h3 class="insight-card-title">Metabolic Dysfunction In Gulf War & OIF/OEF Veterans</h3>
+ <p class="insight-card-description">Understanding deployment-related health challenges and evidence-based protocols for recovery.</p>
+ <a class="insight-card-link">Learn More →</a>
+ </div>
+ </div>
+ <div class="insight-card" onclick="openInsightModal('recovery-modalities')">
+ <div class="insight-card-image" style="background: linear-gradient(135deg, var(--green-dim) 0%, var(--dim) 100%);">❄️</div>
+ <div class="insight-card-content">
+ <h3 class="insight-card-title">Red Light, Cold Plunge, Infrared Sauna? Hype Or Does It Work?</h3>
+ <p class="insight-card-description">The science behind recovery modalities: what actually works and strategic implementation.</p>
+ <a class="insight-card-link">Learn More →</a>
+ </div>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- INSIGHTS MODALS - Abbreviated for length (full content available in assets) -->
+<div id="peptides-modal" class="insight-modal">
+ <div class="insight-modal-content">
+ <div class="insight-modal-header">
+ <button class="insight-modal-close" onclick="closeInsightModal('peptides')">×</button>
+ <p class="label">Educational Article</p>
+ <h2>Peptides? You've Heard About The Frenzy But What Are They Actually?</h2>
+ </div>
+ <div class="insight-modal-body">
+ <h3>Understanding the Basics</h3>
+ <p>Peptides are short chains of amino acids—typically 2-50 amino acids compared to proteins (50+). Because they're smaller, they absorb more efficiently and cross biological barriers more effectively.</p>
+ <h3>How Peptides Function</h3>
+ <p>Peptides work by signaling your body's systems through receptors on cells. Different peptides target different responses:</p>
+ <ul>
+ <li><strong>Growth-stimulating peptides</strong> signal growth hormone production and cellular growth</li>
+ <li><strong>Metabolic peptides</strong> affect energy processing and fat metabolism</li>
+ <li><strong>Cognitive peptides</strong> influence brain function and neural pathways</li>
+ <li><strong>Recovery peptides</strong> support tissue repair and regeneration</li>
+ </ul>
+ <div class="insight-highlight">
+ <strong>Important:</strong> The legal status of peptides varies by country. In the US, many exist in regulatory gray areas. Always verify legal status in your jurisdiction and source from reputable suppliers.
+ </div>
+ <p><strong>Disclaimer:</strong> This article is for educational purposes only, not medical advice. Always consult qualified healthcare providers before considering peptide use.</p>
+ </div>
+ </div>
+</div>
+
+<div id="nutrition-glps-modal" class="insight-modal">
+ <div class="insight-modal-content">
+ <div class="insight-modal-header">
+ <button class="insight-modal-close" onclick="closeInsightModal('nutrition-glps')">×</button>
+ <p class="label">Educational Article</p>
+ <h2>Why Proper Nutrition Is Imperative On GLPs</h2>
+ </div>
+ <div class="insight-modal-body">
+ <h3>The GLP-Nutrition Relationship</h3>
+ <p>GLPs are powerful metabolic tools, but their effectiveness depends critically on supporting nutrition. Without proper nutrition, users experience suboptimal results and increased side effects. With strategic nutrition, results amplify dramatically.</p>
+ <h3>Nutritional Priorities On GLPs</h3>
+ <h4>1. Protein Intake (Critical)</h4>
+ <p>GLPs suppress appetite, making it easy to under-consume protein. Without adequate protein, you lose muscle mass and metabolic capacity. Target: 0.8-1.2g per pound of bodyweight.</p>
+ <h4>2. Micronutrient Density</h4>
+ <p>With reduced overall intake, every calorie must work harder. Deficiencies in Vitamin D, B vitamins, iron, electrolytes, and omega-3s are common if not managed.</p>
+ <h4>3. Meal Composition & Timing</h4>
+ <p>Smaller, more frequent meals often work better. Balance fiber carefully, moderate fat content, and maintain hydration (critical on GLPs).</p>
+ <div class="insight-highlight">
+ <strong>Critical Point:</strong> GLPs are NOT permission to eat poorly. The opposite is true. Success requires MORE intentional nutrition, not less.
+ </div>
+ <p><strong>Disclaimer:</strong> This is educational information only. Always work with qualified healthcare providers and registered dietitians before making nutritional changes, especially on GLPs.</p>
+ </div>
+ </div>
+</div>
+
+<div id="strength-training-modal" class="insight-modal">
+ <div class="insight-modal-content">
+ <div class="insight-modal-header">
+ <button class="insight-modal-close" onclick="closeInsightModal('strength-training')">×</button>
+ <p class="label">Educational Article</p>
+ <h2>Why Strength Training Is King</h2>
+ </div>
+ <div class="insight-modal-body">
+ <h3>Strength Training as the Foundation</h3>
+ <p>Intentional strength training is the single most powerful tool for optimization and aging well. It's not just about building muscle—it's about metabolic efficiency, hormonal balance, bone density, and longevity.</p>
+ <h3>The Metabolic Impact</h3>
+ <h4>Muscle as Metabolic Engine</h4>
+ <p>One pound of muscle burns ~6 calories/day at rest vs. ~2 calories for fat. Building muscle increases resting metabolic rate.</p>
+ <h4>Post-Exercise Oxygen Consumption (EPOC)</h4>
+ <p>Strength training creates elevated oxygen consumption for hours after training. The metabolic impact persists long after the workout.</p>
+ <h4>Hormonal Optimization</h4>
+ <p>Strength training triggers testosterone, growth hormone, IGF-1, and endorphins—all critical for health and aging.</p>
+ <div class="insight-highlight">
+ <strong>Across the Lifespan:</strong> Build muscle in your 20s-30s, defend it in 40s-50s, and make it absolutely critical in 60s+ for independence and longevity.
+ </div>
+ <p><strong>Disclaimer:</strong> Always consult qualified fitness professionals and medical providers before starting any strength program.</p>
+ </div>
+ </div>
+</div>
+
+<div id="visceral-fat-modal" class="insight-modal">
+ <div class="insight-modal-content">
+ <div class="insight-modal-header">
+ <button class="insight-modal-close" onclick="closeInsightModal('visceral-fat')">×</button>
+ <p class="label">Educational Article</p>
+ <h2>The Dangers Of Visceral Fat In Men</h2>
+ </div>
+ <div class="insight-modal-body">
+ <h3>Understanding Visceral Fat</h3>
+ <p>Not all fat is equal. Visceral fat (surrounding organs in the abdominal cavity) is metabolically active, pro-inflammatory, and far more dangerous than subcutaneous fat.</p>
+ <h3>How Visceral Fat Affects Testosterone</h3>
+ <h4>Aromatase Activity</h4>
+ <p>Visceral fat produces aromatase enzyme, which converts testosterone into estrogen. More visceral fat = lower testosterone, higher estrogen.</p>
+ <h4>Hormonal Cascade</h4>
+ <p>Lower testosterone triggers: reduced muscle synthesis, increased fat storage, reduced libido, mood changes, cognitive decline, reduced bone density, and cardiovascular dysfunction.</p>
+ <h3>Reversing Visceral Fat Accumulation</h3>
+ <ul>
+ <li><strong>Strength Training:</strong> Directly reduces visceral fat independent of weight loss</li>
+ <li><strong>Strategic Nutrition:</strong> Reduce refined carbs, increase whole foods and protein</li>
+ <li><strong>Sleep Quality:</strong> 7-9 hours nightly reduces visceral fat accumulation</li>
+ <li><strong>Stress Management:</strong> Reduces cortisol-driven visceral fat storage</li>
+ <li><strong>GLP Support:</strong> Specifically targets visceral fat reduction</li>
+ </ul>
+ <div class="insight-highlight">
+ <strong>The Vicious Cycle:</strong> Visceral fat → insulin resistance → more fat storage → worse insulin resistance. Breaking it requires comprehensive intervention.
+ </div>
+ <p><strong>Disclaimer:</strong> Work with qualified healthcare providers and fitness professionals for safe, personalized metabolic health approaches.</p>
+ </div>
+ </div>
+</div>
+
+<div id="veteran-health-modal" class="insight-modal">
+ <div class="insight-modal-content">
+ <div class="insight-modal-header">
+ <button class="insight-modal-close" onclick="closeInsightModal('veteran-health')">×</button>
+ <p class="label">Educational Article</p>
+ <h2>Metabolic Dysfunction In Gulf War & OIF/OEF Veterans</h2>
+ </div>
+ <div class="insight-modal-body">
+ <h3>The Veteran Health Crisis</h3>
+ <p>Deployment-related metabolic dysfunction is widespread. Veterans from Gulf War, OIF, and OEF face epidemic rates of metabolic syndrome, obesity, and chronic disease—far exceeding civilian rates.</p>
+ <h3>Deployment-Related Exposures</h3>
+ <ul>
+ <li><strong>Chemical:</strong> Burn pit exposure, desert dust, depleted uranium, pesticides</li>
+ <li><strong>Biological:</strong> Infectious diseases, chronic inflammation, dysbiotic microbiome</li>
+ <li><strong>Psychological:</strong> Combat stress, PTSD, sleep deprivation, moral injury</li>
+ </ul>
+ <h3>Reversing Veteran Metabolic Dysfunction</h3>
+ <ul>
+ <li>Targeted anti-inflammatory nutrition</li>
+ <li>Strength training (addresses multiple pathways)</li>
+ <li>Sleep optimization</li>
+ <li>PTSD-specific therapy (EMDR, CBT)</li>
+ <li>Recovery modalities (red light, cold, sauna)</li>
+ <li>Advanced peptide support when needed</li>
+ </ul>
+ <div class="insight-highlight">
+ <strong>Recovery Timeline:</strong> With comprehensive approach, substantial improvements occur within 6-12 months, but recovery is ongoing.
+ </div>
+ <p><strong>Disclaimer:</strong> Work with healthcare providers experienced in veteran health and deployment-related exposures. VA and veteran-specific organizations offer critical resources.</p>
+ </div>
+ </div>
+</div>
+
+<div id="recovery-modalities-modal" class="insight-modal">
+ <div class="insight-modal-content">
+ <div class="insight-modal-header">
+ <button class="insight-modal-close" onclick="closeInsightModal('recovery-modalities')">×</button>
+ <p class="label">Educational Article</p>
+ <h2>Red Light, Cold Plunge, Infrared Sauna? Hype Or Does It Work?</h2>
+ </div>
+ <div class="insight-modal-body">
+ <h3>The Short Answer: It Works—With Strategy</h3>
+ <p>Red light, cold plunge, and sauna are legitimate physiological interventions with research supporting use. Improperly implemented, they're expensive placebos. Strategically implemented, they meaningfully enhance recovery.</p>
+ <h3>Red Light Therapy</h3>
+ <p><strong>How:</strong> Red/near-infrared light (600-1000nm) penetrates tissue, stimulates mitochondria, enhances ATP production.</p>
+ <p><strong>Benefits:</strong> Reduced muscle soreness, faster recovery, joint health, improved skin, enhanced mitochondrial function, systemic anti-inflammation.</p>
+ <p><strong>Implementation:</strong> 10-15 min post-training, direct application to trained areas, 4-6x weekly.</p>
+ <h3>Cold Plunge</h3>
+ <p><strong>How:</strong> Acute cold exposure triggers stress response that drives benefits.</p>
+ <p><strong>Benefits:</strong> Immune enhancement, stress resilience, inflammation reduction, cardiovascular adaptation.</p>
+ <p><strong>Critical Timing:</strong> POST-TRAINING cold reduces anabolic response (not ideal for muscle building). Better on non-training days or recovery days.</p>
+ <p><strong>Implementation:</strong> 50-59°F, 1-3 minutes, 2-4x weekly (not daily).</p>
+ <h3>Infrared Sauna</h3>
+ <p>Supports detoxification, cardiovascular health, and recovery when used 2-3x weekly, 20-30 minutes per session.</p>
+ <p><strong>Disclaimer:</strong> This is educational information. Always consult healthcare providers before starting recovery modalities, especially if you have health conditions.</p>
+ </div>
+ </div>
+</div>
 <footer class="footer">
  <div class="container">
  <div class="footer__grid">
@@ -1920,6 +2351,37 @@
  if (event.key === 'Escape') {
  closeEvoltModal();
  closeModal();
+ }
+ });
+
+ // INSIGHTS MODAL FUNCTIONS
+ function openInsightModal(modalId) {
+ document.getElementById(modalId + '-modal').classList.add('open');
+ document.body.style.overflow = 'hidden';
+ }
+
+ function closeInsightModal(modalId) {
+ document.getElementById(modalId + '-modal').classList.remove('open');
+ document.body.style.overflow = 'auto';
+ }
+
+ // Close insight modals when clicking outside
+ document.querySelectorAll('.insight-modal').forEach(modal => {
+ modal.addEventListener('click', function(event) {
+ if (event.target === this) {
+ const modalId = this.id.replace('-modal', '');
+ closeInsightModal(modalId);
+ }
+ });
+ });
+
+ // Close insight modals with Escape key
+ document.addEventListener('keydown', function(event) {
+ if (event.key === 'Escape') {
+ document.querySelectorAll('.insight-modal.open').forEach(modal => {
+ const modalId = modal.id.replace('-modal', '');
+ closeInsightModal(modalId);
+ });
  }
  });
 </script>
