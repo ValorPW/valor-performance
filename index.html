@@ -735,13 +735,13 @@
  line-height: 1.6;
  color: var(--silver);
  }
- .protocol__audience-grid {
+ .protocol__research-grid {
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
  gap: 24px;
  margin-top: 40px;
  }
- .protocol__audience-card {
+ .protocol__research-card {
  padding: 28px;
  text-align: center;
  border: 1px solid rgba(200, 244, 0, 0.15);
@@ -750,24 +750,24 @@
  animation: slideIn 0.6s ease var(--delay);
  transition: all 0.3s ease;
  }
- .protocol__audience-card:hover {
+ .protocol__research-card:hover {
  border-color: var(--green);
  background: rgba(200, 244, 0, 0.08);
  transform: translateY(-4px);
  }
- .protocol__audience-card i {
+ .protocol__research-card i {
  color: var(--green);
  margin-bottom: 16px;
  display: block;
  }
- .protocol__audience-card h4 {
+ .protocol__research-card h4 {
  font-family: var(--font-display);
  font-size: 16px;
  font-weight: 700;
  margin-bottom: 8px;
  color: var(--white);
  }
- .protocol__audience-card p {
+ .protocol__research-card p {
  font-size: 14px;
  line-height: 1.5;
  color: var(--silver);
@@ -786,11 +786,11 @@
  .protocol__stats { grid-template-columns: 1fr; gap: 30px; }
  .protocol__feature-grid { grid-template-columns: 1fr; }
  .protocol__workflow-steps { grid-template-columns: 1fr; }
- .protocol__audience-grid { grid-template-columns: repeat(2, 1fr); }
+ .protocol__research-grid { grid-template-columns: repeat(2, 1fr); }
  .protocol__cta { padding: 40px 24px; margin-top: 60px; }
  }
  @media (max-width: 480px) {
- .protocol__audience-grid { grid-template-columns: 1fr; }
+ .protocol__research-grid { grid-template-columns: 1fr; }
  .protocol__stat-number { font-size: clamp(32px, 10vw, 48px); }
  .protocol__workflow-step { padding: 24px; border-left-width: 2px; }
  .protocol__workflow-number { font-size: 36px; }
@@ -2012,90 +2012,90 @@
      ═══════════════════════════════════════════════════════ -->
 <section class="section" id="valor-protocol">
  <div class="container">
- <p class="label reveal">Research Platform</p>
- <h2 class="h2 reveal reveal-delay-1">Peptide Research<br>Management Platform.</h2>
- <p class="body-lg reveal reveal-delay-2" style="margin-top:20px">From spreadsheets to science. Manage research protocols, track participant progress, and scale your operation with Valor Protocol.</p>
+ <p class="label reveal">Research Management Platform</p>
+ <h2 class="h2 reveal reveal-delay-1">Your Research,<br>Precisely Tracked.</h2>
+ <p class="body-lg reveal reveal-delay-2" style="margin-top:20px">Structured protocol management for independent researchers. Track cycles, log metrics, access peer-reviewed research data—designed for research integrity and data accuracy.</p>
 
  <!-- PROTOCOL HERO STATS -->
  <div class="protocol__stats" style="margin-top:60px;">
  <div class="protocol__stat reveal">
- <div class="protocol__stat-number">6+</div>
- <div class="protocol__stat-label">Concurrent Protocols</div>
+ <div class="protocol__stat-number">100%</div>
+ <div class="protocol__stat-label">Protocol Adherence</div>
  </div>
  <div class="protocol__stat reveal reveal-delay-1">
- <div class="protocol__stat-number">500+</div>
- <div class="protocol__stat-label">Research Participants</div>
+ <div class="protocol__stat-number">Real-Time</div>
+ <div class="protocol__stat-label">Metrics Logging</div>
  </div>
  <div class="protocol__stat reveal reveal-delay-2">
- <div class="protocol__stat-number">Real-Time</div>
- <div class="protocol__stat-label">Protocol Tracking</div>
+ <div class="protocol__stat-number">Peer-Reviewed</div>
+ <div class="protocol__stat-label">Research Data</div>
  </div>
  </div>
 
  <!-- PROTOCOL FEATURES GRID -->
  <div class="protocol__features" style="margin-top:80px;">
- <h3 class="h3 reveal" style="margin-bottom:40px; text-align:center;">Platform Features</h3>
+ <h3 class="h3 reveal" style="margin-bottom:40px; text-align:center;">Core Features for Research Integrity</h3>
  
  <div class="protocol__feature-grid">
- <!-- Feature 1 -->
+ <!-- Feature 1: Protocol Tracking -->
  <div class="protocol__feature-card reveal">
  <div class="protocol__feature-icon">
- <i data-lucide="users" width="28" height="28"></i>
+ <i data-lucide="calendar" width="28" height="28"></i>
  </div>
- <h4>Client Management Dashboard</h4>
- <p>Manage all research participants from one centralized interface. Real-time status tracking, role-based access, and compliance-ready records.</p>
+ <h4>Precise Protocol Tracking</h4>
+ <p>Know exactly when you start and finish. Track cycle-on and cycle-off dates with precision. Eliminate guessing—every phase of your protocol is timestamped and verifiable.</p>
  </div>
 
- <!-- Feature 2 -->
+ <!-- Feature 2: Metrics Logging -->
  <div class="protocol__feature-card reveal reveal-delay-1">
  <div class="protocol__feature-icon">
- <i data-lucide="activity" width="28" height="28"></i>
+ <i data-lucide="trend-up" width="28" height="28"></i>
  </div>
- <h4>Individual Progress Tracking</h4>
- <p>Monitor weekly metrics, protocol adherence, and research outcomes for each participant. Personalized dashboards and progress charts.</p>
+ <h4>Metrics Logging & Analysis</h4>
+ <p>Log weekly measurements and health markers. Track biometric data, body composition, performance metrics. See real-time trends to assess protocol effectiveness and identify when adjustments are needed.</p>
  </div>
 
- <!-- Feature 3 -->
+ <!-- Feature 3: Cycle Management -->
  <div class="protocol__feature-card reveal reveal-delay-2">
  <div class="protocol__feature-icon">
- <i data-lucide="package" width="28" height="28"></i>
+ <i data-lucide="repeat" width="28" height="28"></i>
  </div>
- <h4>Automated Reorder System</h4>
- <p>Streamline peptide reorders and supply chain management. Integrated request queue, approval workflow, and supplier tracking.</p>
+ <h4>Cycle On/Off Management</h4>
+ <p>Structured cycle tracking for research compounds. Know exactly when to start, when to continue, and when to cycle off. Protocol compliance tracking ensures you stay on schedule.</p>
  </div>
 
- <!-- Feature 4 -->
+ <!-- Feature 4: Research Library -->
  <div class="protocol__feature-card reveal">
  <div class="protocol__feature-icon">
- <i data-lucide="brain" width="28" height="28"></i>
+ <i data-lucide="book-open" width="28" height="28"></i>
  </div>
- <h4>Protocol Suggestions Engine</h4>
- <p>Data-driven AI-assisted recommendations for protocol optimization. Adapt interventions based on individual participant response patterns.</p>
+ <h4>Peer-Reviewed Research Library</h4>
+ <p>Access a curated library of peer-reviewed research on compounds, mechanisms of action, safety profiles, and efficacy data. Make informed decisions backed by published scientific literature.</p>
  </div>
 
- <!-- Feature 5 -->
+ <!-- Feature 5: Precise Dosing -->
  <div class="protocol__feature-card reveal reveal-delay-1">
  <div class="protocol__feature-icon">
- <i data-lucide="bar-chart-2" width="28" height="28"></i>
+ <i data-lucide="calculator" width="28" height="28"></i>
  </div>
- <h4>Research-Grade Analytics</h4>
- <p>Export compliance reports, analyze outcomes, and generate publication-ready data. Track metrics, trends, and research success rates.</p>
+ <h4>Precise Research Dosing Calculator</h4>
+ <p>Accurate dosing calculations based on your bodyweight, tolerance, and protocol parameters. Eliminate dosing errors. Calculate reconstitution, administration timing, and compound purity adjustments with precision.</p>
  </div>
 
- <!-- Feature 6 -->
+ <!-- Feature 6: Data Integrity -->
  <div class="protocol__feature-card reveal reveal-delay-2">
  <div class="protocol__feature-icon">
- <i data-lucide="lock" width="28" height="28"></i>
+ <i data-lucide="shield-check" width="28" height="28"></i>
  </div>
- <h4>Secure Role-Based Access</h4>
- <p>HIPAA-compliant data isolation with separate researcher and admin interfaces. Audit trails, compliance certifications, and enterprise security.</p>
+ <h4>Research-Grade Data Security</h4>
+ <p>Your research data is private, secure, and compliance-ready. Encrypted storage, audit trails, and export functionality for personal record-keeping or research collaboration.</p>
  </div>
  </div>
  </div>
 
  <!-- KEY BENEFITS SECTION -->
  <div class="protocol__benefits" style="margin-top:100px;">
- <h3 class="h3 reveal" style="margin-bottom:40px; text-align:center;">Why Researchers Choose Valor Protocol</h3>
+ <h3 class="h3 reveal" style="margin-bottom:40px; text-align:center;">Why Independent Researchers Use Valor Protocol</h3>
  
  <div class="protocol__benefit reveal">
  <div class="protocol__benefit-content">
@@ -2103,8 +2103,8 @@
  <i data-lucide="check-circle-2" width="24" height="24"></i>
  </div>
  <div>
- <h4>From Spreadsheets to Science</h4>
- <p>Replace manual tracking with an automated research platform. Eliminate data entry errors, reduce compliance risk, and free up time for actual research.</p>
+ <h4>Eliminate Guesswork</h4>
+ <p>Structured tracking removes ambiguity. Know exactly where you are in your protocol, when you cycle on and off, and what your metrics show. Data-driven research, not intuition.</p>
  </div>
  </div>
  </div>
@@ -2115,8 +2115,8 @@
  <i data-lucide="check-circle-2" width="24" height="24"></i>
  </div>
  <div>
- <h4>Scale Without Overhead</h4>
- <p>Grow from managing 5 participants to 500+ without adding manual work. Real-time dashboards keep you in control as your research operation expands.</p>
+ <h4>Assess Protocol Effectiveness</h4>
+ <p>Log metrics throughout your protocol. See trends in real-time. Understand what's working, what needs adjustment, and when to make evidence-based changes to optimize outcomes.</p>
  </div>
  </div>
  </div>
@@ -2127,8 +2127,8 @@
  <i data-lucide="check-circle-2" width="24" height="24"></i>
  </div>
  <div>
- <h4>Data-Driven Protocol Decisions</h4>
- <p>Make evidence-based adjustments with AI-powered protocol suggestions and real-time analytics. Optimize outcomes through data intelligence.</p>
+ <h4>Research-Backed Dosing</h4>
+ <p>Precise math for precise dosing. Avoid errors in reconstitution, administration timing, and compound calculations. Dosing confidence based on peer-reviewed research parameters.</p>
  </div>
  </div>
  </div>
@@ -2139,8 +2139,8 @@
  <i data-lucide="check-circle-2" width="24" height="24"></i>
  </div>
  <div>
- <h4>Research-Ready Compliance</h4>
- <p>Export publication-ready data with full compliance certifications. Audit trails, secure access controls, and HIPAA-grade data protection built-in.</p>
+ <h4>Access Peer-Reviewed Science</h4>
+ <p>Educational library with curated, published research on compounds you're studying. Understand mechanisms, safety profiles, and efficacy data before and during your research.</p>
  </div>
  </div>
  </div>
@@ -2148,71 +2148,73 @@
 
  <!-- WORKFLOW SECTION -->
  <div class="protocol__workflow" style="margin-top:100px;">
- <h3 class="h3 reveal" style="margin-bottom:60px; text-align:center;">How It Works</h3>
+ <h3 class="h3 reveal" style="margin-bottom:60px; text-align:center;">Your Research Protocol Workflow</h3>
  
  <div class="protocol__workflow-steps">
  <div class="protocol__workflow-step reveal">
  <div class="protocol__workflow-number">01</div>
- <h4>Create & Invite</h4>
- <p>Set up research protocols and invite participants. Automated welcome emails with secure login and onboarding instructions.</p>
+ <h4>Plan Your Protocol</h4>
+ <p>Define your research compound, dosing parameters, and cycle timeline. Access the research library to review peer-reviewed studies on your compound of interest.</p>
  </div>
 
  <div class="protocol__workflow-step reveal reveal-delay-1">
  <div class="protocol__workflow-number">02</div>
- <h4>Track Progress</h4>
- <p>Participants log weekly metrics. You monitor compliance, protocol adherence, and individual outcomes in real-time.</p>
+ <h4>Set Precise Dosing</h4>
+ <p>Use the dosing calculator to determine exact amounts based on bodyweight and protocol parameters. Document your calculations for accuracy and reproducibility.</p>
  </div>
 
  <div class="protocol__workflow-step reveal reveal-delay-2">
  <div class="protocol__workflow-number">03</div>
- <h4>Manage Supply</h4>
- <p>Participants request reorders. Automated workflow for approval, supplier notification, and fulfillment tracking.</p>
+ <h4>Track & Log Metrics</h4>
+ <p>Log baseline metrics, then track weekly measurements throughout your protocol. Record biometric data, performance metrics, and health markers to assess effectiveness.</p>
  </div>
 
  <div class="protocol__workflow-step reveal">
  <div class="protocol__workflow-number">04</div>
- <h4>Optimize & Scale</h4>
- <p>Review analytics and protocol suggestions. Make data-driven adjustments and scale your research operation confidently.</p>
+ <h4>Analyze & Adjust</h4>
+ <p>Review your data trends. Make evidence-based adjustments to your protocol based on metrics and outcomes. Cycle off on schedule and document results.</p>
  </div>
  </div>
  </div>
 
- <!-- WHO IT'S FOR -->
- <div class="protocol__audience" style="margin-top:100px;">
- <h3 class="h3 reveal" style="margin-bottom:40px; text-align:center;">Built For</h3>
+ <!-- RESEARCH-FOCUSED BENEFITS -->
+ <div class="protocol__research" style="margin-top:100px;">
+ <h3 class="h3 reveal" style="margin-bottom:40px; text-align:center;">Research Integrity at Every Step</h3>
  
- <div class="protocol__audience-grid">
- <div class="protocol__audience-card reveal">
- <i data-lucide="briefcase" width="32" height="32"></i>
- <h4>Research Lab Managers</h4>
- <p>Oversee multiple concurrent protocols, track team compliance, manage supplies.</p>
- </div>
-
- <div class="protocol__audience-card reveal reveal-delay-1">
- <i data-lucide="microscope" width="32" height="32"></i>
- <h4>Independent Researchers</h4>
- <p>Manage your own protocol trials with professional-grade tools and compliance tracking.</p>
- </div>
-
- <div class="protocol__audience-card reveal reveal-delay-2">
+ <div class="protocol__research-grid">
+ <div class="protocol__research-card reveal">
+ <div class="protocol__research-icon">
  <i data-lucide="clipboard-list" width="32" height="32"></i>
- <h4>Clinical Coordinators</h4>
- <p>Track research participant engagement, adherence, and outcomes with real-time dashboards.</p>
+ </div>
+ <h4>Precise Documentation</h4>
+ <p>Every protocol phase is timestamped and logged. Your research is documented with the precision required for personal record-keeping and data validation.</p>
  </div>
 
- <div class="protocol__audience-card reveal">
- <i data-lucide="users-round" width="32" height="32"></i>
- <h4>Research Teams</h4>
- <p>Coordinate complex multi-participant protocols with secure role-based access and audit trails.</p>
+ <div class="protocol__research-card reveal reveal-delay-1">
+ <i data-lucide="activity" width="32" height="32"></i>
+ <h4>Real-Time Biometric Tracking</h4>
+ <p>Log health markers and biometric data throughout your protocol. Track trends in real-time to understand how your compound is affecting your research outcomes.</p>
+ </div>
+
+ <div class="protocol__research-card reveal reveal-delay-2">
+ <i data-lucide="book" width="32" height="32"></i>
+ <h4>Peer-Reviewed Research Access</h4>
+ <p>Make informed decisions with access to published research. Understand mechanisms of action, safety profiles, and efficacy data backed by peer review.</p>
+ </div>
+
+ <div class="protocol__research-card reveal">
+ <i data-lucide="lock" width="32" height="32"></i>
+ <h4>Secure & Private</h4>
+ <p>Your research data is encrypted, private, and under your control. No external reporting, no data sharing—your protocol is yours alone.</p>
  </div>
  </div>
  </div>
 
  <!-- CTA SECTION -->
  <div class="protocol__cta" style="margin-top:100px; text-align:center;">
- <h3 class="h3 reveal" style="margin-bottom:30px;">Ready to Elevate Your Research Operations?</h3>
- <p class="body-lg reveal reveal-delay-1" style="margin-bottom:40px;">Join research teams managing protocols with professional-grade tools and compliance-ready data.</p>
- <a href="https://valorperformancewellness702.practicebetter.io/#/6a139282c335980c3e9301e3/bookings?s=6a333b36990c979763d0e3c4" target="_blank" class="btn btn--primary reveal reveal-delay-2">Schedule a Protocol Demo</a>
+ <h3 class="h3 reveal" style="margin-bottom:30px;">Ready to Track Your Research with Precision?</h3>
+ <p class="body-lg reveal reveal-delay-1" style="margin-bottom:40px;">Join independent researchers using Valor Protocol to eliminate guesswork and track metrics with scientific rigor.</p>
+ <a href="https://valorperformancewellness702.practicebetter.io/#/6a139282c335980c3e9301e3/bookings?s=6a333b36990c979763d0e3c4" target="_blank" class="btn btn--primary reveal reveal-delay-2">Start Your Protocol Today</a>
  </div>
 
  </div>
