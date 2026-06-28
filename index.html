@@ -597,6 +597,205 @@
  margin-bottom: 4px;
  }
 
+ /* ── VALOR PROTOCOL ───────────────────────────────────── */
+ .protocol__stats {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+ gap: 40px;
+ margin-top: 60px;
+ }
+ .protocol__stat {
+ text-align: center;
+ animation: slideIn 0.6s ease var(--delay);
+ }
+ .protocol__stat-number {
+ font-family: var(--font-display);
+ font-size: clamp(40px, 8vw, 72px);
+ font-weight: 900;
+ color: var(--green);
+ line-height: 1;
+ margin-bottom: 12px;
+ letter-spacing: -2px;
+ }
+ .protocol__stat-label {
+ font-size: 16px;
+ color: var(--silver);
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ font-weight: 600;
+ }
+ .protocol__feature-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 32px;
+ margin-top: 40px;
+ }
+ .protocol__feature-card {
+ padding: 32px;
+ border: 1px solid rgba(200, 244, 0, 0.15);
+ border-radius: 12px;
+ background: rgba(200, 244, 0, 0.03);
+ animation: slideIn 0.6s ease var(--delay);
+ transition: all 0.3s ease;
+ }
+ .protocol__feature-card:hover {
+ border-color: rgba(200, 244, 0, 0.4);
+ background: rgba(200, 244, 0, 0.08);
+ transform: translateY(-4px);
+ }
+ .protocol__feature-icon {
+ width: 56px;
+ height: 56px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: rgba(200, 244, 0, 0.1);
+ border-radius: 8px;
+ color: var(--green);
+ margin-bottom: 20px;
+ transition: all 0.3s ease;
+ }
+ .protocol__feature-card:hover .protocol__feature-icon {
+ background: rgba(200, 244, 0, 0.2);
+ transform: scale(1.1);
+ }
+ .protocol__feature-card h4 {
+ font-family: var(--font-display);
+ font-size: 18px;
+ font-weight: 700;
+ margin-bottom: 12px;
+ color: var(--white);
+ }
+ .protocol__feature-card p {
+ font-size: 15px;
+ line-height: 1.6;
+ color: var(--silver);
+ }
+ .protocol__benefits {
+ display: flex;
+ flex-direction: column;
+ gap: 32px;
+ max-width: 800px;
+ margin: 100px auto 0;
+ }
+ .protocol__benefit {
+ animation: slideIn 0.6s ease var(--delay);
+ }
+ .protocol__benefit-content {
+ display: flex;
+ gap: 24px;
+ align-items: flex-start;
+ }
+ .protocol__benefit-icon {
+ color: var(--green);
+ flex-shrink: 0;
+ margin-top: 4px;
+ }
+ .protocol__benefit h4 {
+ font-family: var(--font-display);
+ font-size: 18px;
+ font-weight: 700;
+ margin-bottom: 8px;
+ color: var(--white);
+ }
+ .protocol__benefit p {
+ font-size: 15px;
+ line-height: 1.6;
+ color: var(--silver);
+ }
+ .protocol__workflow-steps {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ gap: 32px;
+ margin-top: 40px;
+ }
+ .protocol__workflow-step {
+ position: relative;
+ padding: 32px;
+ border-left: 3px solid var(--green);
+ animation: slideIn 0.6s ease var(--delay);
+ }
+ .protocol__workflow-number {
+ font-family: var(--font-display);
+ font-size: 48px;
+ font-weight: 900;
+ color: rgba(200, 244, 0, 0.2);
+ line-height: 1;
+ margin-bottom: 16px;
+ }
+ .protocol__workflow-step h4 {
+ font-family: var(--font-display);
+ font-size: 18px;
+ font-weight: 700;
+ margin-bottom: 12px;
+ color: var(--white);
+ }
+ .protocol__workflow-step p {
+ font-size: 15px;
+ line-height: 1.6;
+ color: var(--silver);
+ }
+ .protocol__audience-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+ gap: 24px;
+ margin-top: 40px;
+ }
+ .protocol__audience-card {
+ padding: 28px;
+ text-align: center;
+ border: 1px solid rgba(200, 244, 0, 0.15);
+ border-radius: 12px;
+ background: rgba(200, 244, 0, 0.02);
+ animation: slideIn 0.6s ease var(--delay);
+ transition: all 0.3s ease;
+ }
+ .protocol__audience-card:hover {
+ border-color: var(--green);
+ background: rgba(200, 244, 0, 0.08);
+ transform: translateY(-4px);
+ }
+ .protocol__audience-card i {
+ color: var(--green);
+ margin-bottom: 16px;
+ display: block;
+ }
+ .protocol__audience-card h4 {
+ font-family: var(--font-display);
+ font-size: 16px;
+ font-weight: 700;
+ margin-bottom: 8px;
+ color: var(--white);
+ }
+ .protocol__audience-card p {
+ font-size: 14px;
+ line-height: 1.5;
+ color: var(--silver);
+ }
+ .protocol__cta {
+ padding: 60px 40px;
+ background: linear-gradient(135deg, rgba(200, 244, 0, 0.05) 0%, rgba(200, 244, 0, 0.02) 100%);
+ border: 1px solid rgba(200, 244, 0, 0.2);
+ border-radius: 12px;
+ margin-top: 100px;
+ }
+ .protocol__cta h3 { animation: slideIn 0.6s ease 0s; }
+ .protocol__cta p { animation: slideIn 0.6s ease 0.1s; }
+ .protocol__cta .btn { animation: slideIn 0.6s ease 0.2s; }
+ @media (max-width: 768px) {
+ .protocol__stats { grid-template-columns: 1fr; gap: 30px; }
+ .protocol__feature-grid { grid-template-columns: 1fr; }
+ .protocol__workflow-steps { grid-template-columns: 1fr; }
+ .protocol__audience-grid { grid-template-columns: repeat(2, 1fr); }
+ .protocol__cta { padding: 40px 24px; margin-top: 60px; }
+ }
+ @media (max-width: 480px) {
+ .protocol__audience-grid { grid-template-columns: 1fr; }
+ .protocol__stat-number { font-size: clamp(32px, 10vw, 48px); }
+ .protocol__workflow-step { padding: 24px; border-left-width: 2px; }
+ .protocol__workflow-number { font-size: 36px; }
+ }
+
  /* ── TESTIMONIALS ───────────────────────────────────── */
  .testimonials { background: var(--dim); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
  .testimonials__grid {
@@ -1262,6 +1461,7 @@
  <li><a href="#method" class="nav__link">The Method</a></li>
  <li><a href="#services" class="nav__link">Services</a></li>
  <li><a href="#membership" class="nav__link">Membership</a></li>
+ <li><a href="#valor-protocol" class="nav__link">Research</a></li>
  <li><a href="#testimonials" class="nav__link">Results</a></li>
  </ul>
 
@@ -1280,6 +1480,7 @@
  <a href="#method" class="nav__link" onclick="toggleMenu()">The Method</a>
  <a href="#services" class="nav__link" onclick="toggleMenu()">Services</a>
  <a href="#membership" class="nav__link" onclick="toggleMenu()">Membership</a>
+ <a href="#valor-protocol" class="nav__link" onclick="toggleMenu()">Research</a>
  <a href="#testimonials" class="nav__link" onclick="toggleMenu()">Results</a>
  <div class="divider"></div>
  <a href="https://valorperformancewellness702.practicebetter.io/#/6a139282c335980c3e9301e3/bookings?s=6a333b36990c979763d0e3c4" target="_blank" class="btn btn--primary" onclick="toggleMenu();" style="display: inline-flex; justify-content: center; width: 100%; text-align: center;">Book a Session</a>
@@ -1805,6 +2006,221 @@
 </style>
 
 ═══════════════════════════════════════════════════════ -->
+
+<!-- ═══════════════════════════════════════════════════════
+     VALOR PROTOCOL TRACKER
+     ═══════════════════════════════════════════════════════ -->
+<section class="section" id="valor-protocol">
+ <div class="container">
+ <p class="label reveal">Research Platform</p>
+ <h2 class="h2 reveal reveal-delay-1">Peptide Research<br>Management Platform.</h2>
+ <p class="body-lg reveal reveal-delay-2" style="margin-top:20px">From spreadsheets to science. Manage research protocols, track participant progress, and scale your operation with Valor Protocol.</p>
+
+ <!-- PROTOCOL HERO STATS -->
+ <div class="protocol__stats" style="margin-top:60px;">
+ <div class="protocol__stat reveal">
+ <div class="protocol__stat-number">6+</div>
+ <div class="protocol__stat-label">Concurrent Protocols</div>
+ </div>
+ <div class="protocol__stat reveal reveal-delay-1">
+ <div class="protocol__stat-number">500+</div>
+ <div class="protocol__stat-label">Research Participants</div>
+ </div>
+ <div class="protocol__stat reveal reveal-delay-2">
+ <div class="protocol__stat-number">Real-Time</div>
+ <div class="protocol__stat-label">Protocol Tracking</div>
+ </div>
+ </div>
+
+ <!-- PROTOCOL FEATURES GRID -->
+ <div class="protocol__features" style="margin-top:80px;">
+ <h3 class="h3 reveal" style="margin-bottom:40px; text-align:center;">Platform Features</h3>
+ 
+ <div class="protocol__feature-grid">
+ <!-- Feature 1 -->
+ <div class="protocol__feature-card reveal">
+ <div class="protocol__feature-icon">
+ <i data-lucide="users" width="28" height="28"></i>
+ </div>
+ <h4>Client Management Dashboard</h4>
+ <p>Manage all research participants from one centralized interface. Real-time status tracking, role-based access, and compliance-ready records.</p>
+ </div>
+
+ <!-- Feature 2 -->
+ <div class="protocol__feature-card reveal reveal-delay-1">
+ <div class="protocol__feature-icon">
+ <i data-lucide="activity" width="28" height="28"></i>
+ </div>
+ <h4>Individual Progress Tracking</h4>
+ <p>Monitor weekly metrics, protocol adherence, and research outcomes for each participant. Personalized dashboards and progress charts.</p>
+ </div>
+
+ <!-- Feature 3 -->
+ <div class="protocol__feature-card reveal reveal-delay-2">
+ <div class="protocol__feature-icon">
+ <i data-lucide="package" width="28" height="28"></i>
+ </div>
+ <h4>Automated Reorder System</h4>
+ <p>Streamline peptide reorders and supply chain management. Integrated request queue, approval workflow, and supplier tracking.</p>
+ </div>
+
+ <!-- Feature 4 -->
+ <div class="protocol__feature-card reveal">
+ <div class="protocol__feature-icon">
+ <i data-lucide="brain" width="28" height="28"></i>
+ </div>
+ <h4>Protocol Suggestions Engine</h4>
+ <p>Data-driven AI-assisted recommendations for protocol optimization. Adapt interventions based on individual participant response patterns.</p>
+ </div>
+
+ <!-- Feature 5 -->
+ <div class="protocol__feature-card reveal reveal-delay-1">
+ <div class="protocol__feature-icon">
+ <i data-lucide="bar-chart-2" width="28" height="28"></i>
+ </div>
+ <h4>Research-Grade Analytics</h4>
+ <p>Export compliance reports, analyze outcomes, and generate publication-ready data. Track metrics, trends, and research success rates.</p>
+ </div>
+
+ <!-- Feature 6 -->
+ <div class="protocol__feature-card reveal reveal-delay-2">
+ <div class="protocol__feature-icon">
+ <i data-lucide="lock" width="28" height="28"></i>
+ </div>
+ <h4>Secure Role-Based Access</h4>
+ <p>HIPAA-compliant data isolation with separate researcher and admin interfaces. Audit trails, compliance certifications, and enterprise security.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- KEY BENEFITS SECTION -->
+ <div class="protocol__benefits" style="margin-top:100px;">
+ <h3 class="h3 reveal" style="margin-bottom:40px; text-align:center;">Why Researchers Choose Valor Protocol</h3>
+ 
+ <div class="protocol__benefit reveal">
+ <div class="protocol__benefit-content">
+ <div class="protocol__benefit-icon">
+ <i data-lucide="check-circle-2" width="24" height="24"></i>
+ </div>
+ <div>
+ <h4>From Spreadsheets to Science</h4>
+ <p>Replace manual tracking with an automated research platform. Eliminate data entry errors, reduce compliance risk, and free up time for actual research.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="protocol__benefit reveal reveal-delay-1">
+ <div class="protocol__benefit-content">
+ <div class="protocol__benefit-icon">
+ <i data-lucide="check-circle-2" width="24" height="24"></i>
+ </div>
+ <div>
+ <h4>Scale Without Overhead</h4>
+ <p>Grow from managing 5 participants to 500+ without adding manual work. Real-time dashboards keep you in control as your research operation expands.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="protocol__benefit reveal reveal-delay-2">
+ <div class="protocol__benefit-content">
+ <div class="protocol__benefit-icon">
+ <i data-lucide="check-circle-2" width="24" height="24"></i>
+ </div>
+ <div>
+ <h4>Data-Driven Protocol Decisions</h4>
+ <p>Make evidence-based adjustments with AI-powered protocol suggestions and real-time analytics. Optimize outcomes through data intelligence.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="protocol__benefit reveal">
+ <div class="protocol__benefit-content">
+ <div class="protocol__benefit-icon">
+ <i data-lucide="check-circle-2" width="24" height="24"></i>
+ </div>
+ <div>
+ <h4>Research-Ready Compliance</h4>
+ <p>Export publication-ready data with full compliance certifications. Audit trails, secure access controls, and HIPAA-grade data protection built-in.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- WORKFLOW SECTION -->
+ <div class="protocol__workflow" style="margin-top:100px;">
+ <h3 class="h3 reveal" style="margin-bottom:60px; text-align:center;">How It Works</h3>
+ 
+ <div class="protocol__workflow-steps">
+ <div class="protocol__workflow-step reveal">
+ <div class="protocol__workflow-number">01</div>
+ <h4>Create & Invite</h4>
+ <p>Set up research protocols and invite participants. Automated welcome emails with secure login and onboarding instructions.</p>
+ </div>
+
+ <div class="protocol__workflow-step reveal reveal-delay-1">
+ <div class="protocol__workflow-number">02</div>
+ <h4>Track Progress</h4>
+ <p>Participants log weekly metrics. You monitor compliance, protocol adherence, and individual outcomes in real-time.</p>
+ </div>
+
+ <div class="protocol__workflow-step reveal reveal-delay-2">
+ <div class="protocol__workflow-number">03</div>
+ <h4>Manage Supply</h4>
+ <p>Participants request reorders. Automated workflow for approval, supplier notification, and fulfillment tracking.</p>
+ </div>
+
+ <div class="protocol__workflow-step reveal">
+ <div class="protocol__workflow-number">04</div>
+ <h4>Optimize & Scale</h4>
+ <p>Review analytics and protocol suggestions. Make data-driven adjustments and scale your research operation confidently.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- WHO IT'S FOR -->
+ <div class="protocol__audience" style="margin-top:100px;">
+ <h3 class="h3 reveal" style="margin-bottom:40px; text-align:center;">Built For</h3>
+ 
+ <div class="protocol__audience-grid">
+ <div class="protocol__audience-card reveal">
+ <i data-lucide="briefcase" width="32" height="32"></i>
+ <h4>Research Lab Managers</h4>
+ <p>Oversee multiple concurrent protocols, track team compliance, manage supplies.</p>
+ </div>
+
+ <div class="protocol__audience-card reveal reveal-delay-1">
+ <i data-lucide="microscope" width="32" height="32"></i>
+ <h4>Independent Researchers</h4>
+ <p>Manage your own protocol trials with professional-grade tools and compliance tracking.</p>
+ </div>
+
+ <div class="protocol__audience-card reveal reveal-delay-2">
+ <i data-lucide="clipboard-list" width="32" height="32"></i>
+ <h4>Clinical Coordinators</h4>
+ <p>Track research participant engagement, adherence, and outcomes with real-time dashboards.</p>
+ </div>
+
+ <div class="protocol__audience-card reveal">
+ <i data-lucide="users-round" width="32" height="32"></i>
+ <h4>Research Teams</h4>
+ <p>Coordinate complex multi-participant protocols with secure role-based access and audit trails.</p>
+ </div>
+ </div>
+ </div>
+
+ <!-- CTA SECTION -->
+ <div class="protocol__cta" style="margin-top:100px; text-align:center;">
+ <h3 class="h3 reveal" style="margin-bottom:30px;">Ready to Elevate Your Research Operations?</h3>
+ <p class="body-lg reveal reveal-delay-1" style="margin-bottom:40px;">Join research teams managing protocols with professional-grade tools and compliance-ready data.</p>
+ <a href="https://valorperformancewellness702.practicebetter.io/#/6a139282c335980c3e9301e3/bookings?s=6a333b36990c979763d0e3c4" target="_blank" class="btn btn--primary reveal reveal-delay-2">Schedule a Protocol Demo</a>
+ </div>
+
+ </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     EDUCATIONAL INSIGHTS SECTION
+     ═══════════════════════════════════════════════════════ -->
 <!-- EDUCATIONAL INSIGHTS SECTION -->
 <section class="section" style="border-top: 1px solid var(--border);">
  <div class="container">
