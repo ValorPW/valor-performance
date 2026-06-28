@@ -1,376 +1,1549 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valor Performance & Wellness | Human Optimization</title>
-    <meta name="description" content="Veteran-owned precision nutrition, intentional training, and advanced recovery protocols for athletes and high-performers.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        dark: '#111827',
-                        neon: '#39FF14',
-                        'neon-glow': 'rgba(57, 255, 20, 0.3)',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style>
-        .neon-text-glow {
-            text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
-        }
-        .neon-border-glow {
-            box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
-        }
-        .neon-button-glow:hover {
-            box-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
-        }
-        .grid-bg {
-            background-image: linear-gradient(rgba(57, 255, 20, 0.05) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(57, 255, 20, 0.05) 1px, transparent 1px);
-            background-size: 50px 50px;
-        }
-        .mobile-menu-open {
-            overflow: hidden;
-        }
-    </style>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Valor Performance & Wellness | Biometric Optimization Studio</title>
+ <meta name="description" content="Science-forward biometric optimization studio in Saint Augustine, FL. Elite performance testing, metabolic analysis, VO2 max, body composition, and virtual coaching nationwide." />
+ <meta name="keywords" content="biometric optimization, performance testing, VO2 max, metabolic rate testing, body composition, Saint Augustine FL, virtual wellness coaching" />
+ <meta property="og:title" content="Valor Performance & Wellness" />
+ <meta property="og:description" content="Precision biometric testing. Data-driven performance. In-studio in Saint Augustine or virtual nationwide." />
+ <meta property="og:type" content="website" />
+ <meta property="og:url" content="https://valormethod.us" />
+ <link rel="canonical" href="https://valormethod.us" />
+
+ <!-- Google Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+ <!-- Lucide Icons CDN -->
+ <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+ <style>
+ /* ── TOKENS ─────────────────────────────────────────── */
+ :root {
+ --black: #000000;
+ --green: #C8F400;
+ --white: #FFFFFF;
+ --silver: #B0B0B0;
+ --dim: #0A0A0A;
+ --card: #111111;
+ --border: #1E1E1E;
+ --green-dim: rgba(200,244,0,0.08);
+ --green-glow: rgba(200,244,0,0.25);
+
+ --font-display: 'Bebas Neue', sans-serif;
+ --font-body: 'Inter', sans-serif;
+ --font-mono: 'JetBrains Mono', monospace;
+
+ --radius: 2px;
+ --transition: 0.2s ease;
+ }
+
+ /* ── RESET ──────────────────────────────────────────── */
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { scroll-behavior: smooth; }
+ body {
+ background: var(--black);
+ color: var(--white);
+ font-family: var(--font-body);
+ font-size: 16px;
+ line-height: 1.6;
+ -webkit-font-smoothing: antialiased;
+ overflow-x: hidden;
+ }
+ a { color: inherit; text-decoration: none; }
+ ul { list-style: none; }
+ img { display: block; max-width: 100%; }
+ button { cursor: pointer; border: none; background: none; font: inherit; }
+
+ /* ── UTILITIES ──────────────────────────────────────── */
+ .container {
+ width: 100%;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+ .section { padding: 96px 0; }
+ .section--tight { padding: 64px 0; }
+ .label {
+ font-family: var(--font-mono);
+ font-size: 11px;
+ letter-spacing: 0.18em;
+ text-transform: uppercase;
+ color: var(--green);
+ margin-bottom: 16px;
+ }
+ .h1 {
+ font-family: var(--font-display);
+ font-size: clamp(56px, 10vw, 120px);
+ line-height: 0.92;
+ letter-spacing: 0.01em;
+ }
+ .h2 {
+ font-family: var(--font-display);
+ font-size: clamp(40px, 6vw, 72px);
+ line-height: 0.95;
+ letter-spacing: 0.01em;
+ }
+ .h3 {
+ font-family: var(--font-display);
+ font-size: clamp(24px, 3vw, 36px);
+ line-height: 1;
+ letter-spacing: 0.02em;
+ }
+ .body-lg { font-size: 18px; line-height: 1.7; color: var(--silver); }
+ .body-sm { font-size: 14px; line-height: 1.6; color: var(--silver); }
+ .green { color: var(--green); }
+ .divider {
+ width: 100%;
+ height: 1px;
+ background: var(--border);
+ }
+
+ /* ── BUTTONS ────────────────────────────────────────── */
+ .btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ padding: 14px 32px;
+ font-family: var(--font-mono);
+ font-size: 13px;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ border-radius: var(--radius);
+ transition: var(--transition);
+ }
+ .btn--primary {
+ background: var(--green);
+ color: var(--black);
+ font-weight: 600;
+ }
+ .btn--primary:hover { background: #d4ff00; box-shadow: 0 0 24px var(--green-glow); }
+ .btn--outline {
+ border: 1px solid var(--border);
+ color: var(--white);
+ }
+ .btn--outline:hover { border-color: var(--green); color: var(--green); }
+
+ /* ── NAV ────────────────────────────────────────────── */
+ .nav {
+ position: fixed;
+ top: 0; left: 0; right: 0;
+ z-index: 100;
+ height: 72px;
+ display: flex;
+ align-items: center;
+ border-bottom: 1px solid transparent;
+ transition: background 0.3s, border-color 0.3s;
+ }
+ .nav.scrolled {
+ background: rgba(0,0,0,0.92);
+ backdrop-filter: blur(12px);
+ border-color: var(--border);
+ }
+ .nav__inner {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ width: 100%;
+ }
+ .nav__logo {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ }
+ .nav__shield {
+ width: 36px;
+ height: 36px;
+ position: relative;
+ }
+ .nav__wordmark {
+ font-family: var(--font-display);
+ font-size: 22px;
+ letter-spacing: 0.08em;
+ color: var(--white);
+ }
+ .nav__wordmark span { color: var(--green); }
+ .nav__links {
+ display: flex;
+ align-items: center;
+ gap: 32px;
+ }
+ .nav__link {
+ font-family: var(--font-mono);
+ font-size: 12px;
+ letter-spacing: 0.12em;
+ text-transform: uppercase;
+ color: var(--silver);
+ transition: color var(--transition);
+ }
+ .nav__link:hover { color: var(--green); }
+ .nav__cta { display: flex; align-items: center; gap: 16px; }
+ .nav__hamburger { display: none; color: var(--white); }
+ .nav__mobile {
+ display: none;
+ position: fixed;
+ top: 72px; left: 0; right: 0; bottom: 0;
+ background: var(--black);
+ padding: 40px 24px;
+ z-index: 99;
+ flex-direction: column;
+ gap: 24px;
+ border-top: 1px solid var(--border);
+ }
+ .nav__mobile.open { display: flex; }
+ .nav__mobile .nav__link { font-size: 14px; }
+
+ /* ── SHIELD SVG ─────────────────────────────────────── */
+ .shield-svg {
+ width: 100%;
+ height: 100%;
+ }
+
+ /* ── HERO ───────────────────────────────────────────── */
+ .hero {
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ padding-top: 72px;
+ position: relative;
+ overflow: hidden;
+ }
+ .hero__bg {
+ position: absolute;
+ inset: 0;
+ pointer-events: none;
+ overflow: hidden;
+ }
+ /* Biometric grid overlay */
+ .hero__grid {
+ position: absolute;
+ inset: 0;
+ background-image:
+ linear-gradient(rgba(200,244,0,0.03) 1px, transparent 1px),
+ linear-gradient(90deg, rgba(200,244,0,0.03) 1px, transparent 1px);
+ background-size: 60px 60px;
+ mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+ }
+ /* Pulse rings */
+ .hero__pulse {
+ position: absolute;
+ right: -10%;
+ top: 50%;
+ transform: translateY(-50%);
+ width: 700px;
+ height: 700px;
+ border-radius: 50%;
+ border: 1px solid rgba(200,244,0,0.06);
+ animation: pulse-ring 4s ease-out infinite;
+ }
+ .hero__pulse:nth-child(2) { animation-delay: 1.3s; width: 550px; height: 550px; }
+ .hero__pulse:nth-child(3) { animation-delay: 2.6s; width: 400px; height: 400px; }
+ @keyframes pulse-ring {
+ 0% { opacity: 0.7; transform: translateY(-50%) scale(0.9); }
+ 100% { opacity: 0; transform: translateY(-50%) scale(1.15); }
+ }
+ /* EKG line */
+ .hero__ekg {
+ position: absolute;
+ bottom: 80px;
+ left: 0;
+ right: 0;
+ height: 60px;
+ opacity: 0.15;
+ }
+ .hero__content {
+ position: relative;
+ z-index: 2;
+ max-width: 800px;
+ }
+ .hero__eyebrow {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ margin-bottom: 28px;
+ }
+ .hero__dot {
+ width: 8px;
+ height: 8px;
+ border-radius: 50%;
+ background: var(--green);
+ animation: blink 2s ease-in-out infinite;
+ }
+ @keyframes blink {
+ 0%, 100% { opacity: 1; }
+ 50% { opacity: 0.3; }
+ }
+ .hero__title { margin-bottom: 28px; }
+ .hero__title .line2 { color: var(--green); }
+ .hero__subtitle {
+ max-width: 560px;
+ margin-bottom: 48px;
+ }
+ .hero__actions { display: flex; gap: 16px; flex-wrap: wrap; }
+ .hero__stat-strip {
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ border-top: 1px solid var(--border);
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ }
+ .hero__stat {
+ padding: 24px;
+ border-right: 1px solid var(--border);
+ display: flex;
+ flex-direction: column;
+ gap: 4px;
+ }
+ .hero__stat:last-child { border-right: none; }
+ .hero__stat-num {
+ font-family: var(--font-display);
+ font-size: 32px;
+ color: var(--green);
+ line-height: 1;
+ }
+ .hero__stat-label {
+ font-family: var(--font-mono);
+ font-size: 10px;
+ letter-spacing: 0.15em;
+ color: var(--silver);
+ text-transform: uppercase;
+ }
+
+ /* ── MARQUEE ────────────────────────────────────────── */
+ .marquee-bar {
+ background: var(--green);
+ padding: 10px 0;
+ overflow: hidden;
+ white-space: nowrap;
+ }
+ .marquee-inner {
+ display: inline-block;
+ animation: marquee 28s linear infinite;
+ }
+ .marquee-inner span {
+ font-family: var(--font-mono);
+ font-size: 11px;
+ letter-spacing: 0.15em;
+ text-transform: uppercase;
+ color: var(--black);
+ margin: 0 32px;
+ }
+ .marquee-inner span::before {
+ content: '◆ ';
+ }
+ @keyframes marquee {
+ 0% { transform: translateX(0); }
+ 100% { transform: translateX(-50%); }
+ }
+
+ /* ── METHOD SECTION ─────────────────────────────────── */
+ .method {
+ background: var(--dim);
+ border-top: 1px solid var(--border);
+ border-bottom: 1px solid var(--border);
+ }
+ .method__grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 80px;
+ align-items: center;
+ }
+ .method__steps { margin-top: 40px; display: flex; flex-direction: column; gap: 0; }
+ .method__step {
+ display: flex;
+ gap: 20px;
+ padding: 24px 0;
+ border-bottom: 1px solid var(--border);
+ }
+ .method__step:first-child { border-top: 1px solid var(--border); }
+ .method__step-num {
+ font-family: var(--font-mono);
+ font-size: 12px;
+ color: var(--green);
+ padding-top: 3px;
+ flex-shrink: 0;
+ width: 32px;
+ }
+ .method__step-title {
+ font-family: var(--font-display);
+ font-size: 20px;
+ letter-spacing: 0.04em;
+ margin-bottom: 4px;
+ }
+ /* Biometric visual */
+ .method__visual {
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+ }
+ .metric-card {
+ background: var(--card);
+ border: 1px solid var(--border);
+ border-radius: var(--radius);
+ padding: 20px 24px;
+ display: flex;
+ align-items: center;
+ gap: 16px;
+ }
+ .metric-card__icon {
+ width: 40px;
+ height: 40px;
+ background: var(--green-dim);
+ border: 1px solid rgba(200,244,0,0.2);
+ border-radius: var(--radius);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: var(--green);
+ flex-shrink: 0;
+ }
+ .metric-card__label {
+ font-family: var(--font-mono);
+ font-size: 10px;
+ letter-spacing: 0.15em;
+ color: var(--silver);
+ text-transform: uppercase;
+ margin-bottom: 4px;
+ }
+ .metric-card__value {
+ font-family: var(--font-display);
+ font-size: 26px;
+ color: var(--green);
+ line-height: 1;
+ }
+ .metric-card__bar {
+ flex: 1;
+ height: 4px;
+ background: var(--border);
+ border-radius: 2px;
+ overflow: hidden;
+ margin-left: auto;
+ width: 80px;
+ }
+ .metric-card__fill {
+ height: 100%;
+ background: var(--green);
+ border-radius: 2px;
+ transition: width 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ /* ── SERVICES ───────────────────────────────────────── */
+ .services__header {
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-end;
+ margin-bottom: 64px;
+ gap: 40px;
+ flex-wrap: wrap;
+ }
+ .services__grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 1px;
+ background: var(--border);
+ border: 1px solid var(--border);
+ }
+ .service-card {
+ background: var(--black);
+ padding: 40px 32px;
+ display: flex;
+ flex-direction: column;
+ gap: 16px;
+ transition: background var(--transition);
+ position: relative;
+ overflow: hidden;
+ }
+ .service-card::after {
+ content: '';
+ position: absolute;
+ bottom: 0; left: 0; right: 0;
+ height: 2px;
+ background: var(--green);
+ transform: scaleX(0);
+ transform-origin: left;
+ transition: transform 0.3s ease;
+ }
+ .service-card:hover { background: var(--card); }
+ .service-card:hover::after { transform: scaleX(1); }
+ .service-card__icon {
+ width: 48px;
+ height: 48px;
+ color: var(--green);
+ }
+ .service-card__tag {
+ font-family: var(--font-mono);
+ font-size: 10px;
+ letter-spacing: 0.15em;
+ color: var(--silver);
+ text-transform: uppercase;
+ }
+ .service-card__title {
+ font-family: var(--font-display);
+ font-size: 22px;
+ letter-spacing: 0.04em;
+ line-height: 1.1;
+ }
+ .service-card__desc { font-size: 14px; color: var(--silver); line-height: 1.6; }
+ .service-card__link {
+ font-family: var(--font-mono);
+ font-size: 11px;
+ letter-spacing: 0.1em;
+ color: var(--green);
+ text-transform: uppercase;
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ margin-top: auto;
+ }
+
+ /* ── MEMBERSHIP ─────────────────────────────────────── */
+ .membership { background: var(--dim); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+ .membership__grid {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 24px;
+ margin-top: 56px;
+ }
+ .tier-card {
+ border: 1px solid var(--border);
+ padding: 40px 32px;
+ display: flex;
+ flex-direction: column;
+ gap: 24px;
+ position: relative;
+ background: var(--black);
+ }
+ .tier-card--featured {
+ border-color: var(--green);
+ background: var(--green-dim);
+ }
+ .tier-card--featured::before {
+ content: 'MOST POPULAR';
+ position: absolute;
+ top: -1px; left: 50%;
+ transform: translateX(-50%);
+ background: var(--green);
+ color: var(--black);
+ font-family: var(--font-mono);
+ font-size: 9px;
+ letter-spacing: 0.15em;
+ padding: 4px 16px;
+ }
+ .tier-card__name {
+ font-family: var(--font-display);
+ font-size: 28px;
+ letter-spacing: 0.06em;
+ }
+ .tier-card__price {
+ display: flex;
+ align-items: baseline;
+ gap: 4px;
+ }
+ .tier-card__amount {
+ font-family: var(--font-display);
+ font-size: 48px;
+ color: var(--green);
+ line-height: 1;
+ }
+ .tier-card__period {
+ font-family: var(--font-mono);
+ font-size: 11px;
+ color: var(--silver);
+ letter-spacing: 0.1em;
+ }
+ .tier-card__features { display: flex; flex-direction: column; gap: 12px; }
+ .tier-card__feature {
+ display: flex;
+ align-items: flex-start;
+ gap: 10px;
+ font-size: 14px;
+ color: var(--silver);
+ }
+ .tier-card__check {
+ color: var(--green);
+ flex-shrink: 0;
+ margin-top: 2px;
+ }
+
+ /* ── VIRTUAL ────────────────────────────────────────── */
+ .virtual__inner {
+ display: flex;
+ flex-direction: column;
+ gap: 60px;
+ }
+ .virtual__features { margin-top: 40px; display: flex; flex-direction: column; gap: 24px; }
+ .virtual__feature {
+ display: flex;
+ gap: 16px;
+ padding: 24px;
+ border: 1px solid var(--border);
+ background: var(--card);
+ }
+ .virtual__feature-icon {
+ width: 36px;
+ height: 36px;
+ color: var(--green);
+ flex-shrink: 0;
+ }
+ .virtual__feature-title {
+ font-family: var(--font-display);
+ font-size: 18px;
+ letter-spacing: 0.04em;
+ margin-bottom: 4px;
+ }
+
+ /* ── TESTIMONIALS ───────────────────────────────────── */
+ .testimonials { background: var(--dim); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+ .testimonials__grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 24px;
+ margin-top: 56px;
+ }
+ .testimonial-card {
+ border: 1px solid var(--border);
+ padding: 32px;
+ background: var(--black);
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ }
+ .testimonial-card__stars {
+ display: flex;
+ gap: 4px;
+ color: var(--green);
+ }
+ .testimonial-card__text {
+ font-size: 15px;
+ color: var(--silver);
+ line-height: 1.7;
+ flex: 1;
+ }
+ .testimonial-card__author {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ padding-top: 16px;
+ border-top: 1px solid var(--border);
+ }
+ .testimonial-card__avatar {
+ width: 40px;
+ height: 40px;
+ background: var(--green-dim);
+ border: 1px solid rgba(200,244,0,0.2);
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: var(--green);
+ font-family: var(--font-mono);
+ font-size: 12px;
+ flex-shrink: 0;
+ }
+ .testimonial-card__name {
+ font-family: var(--font-display);
+ font-size: 16px;
+ letter-spacing: 0.04em;
+ }
+ .testimonial-card__meta {
+ font-family: var(--font-mono);
+ font-size: 10px;
+ color: var(--silver);
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ }
+
+ /* ── CTA BAND ───────────────────────────────────────── */
+ .cta-band {
+ background: var(--green);
+ padding: 80px 0;
+ position: relative;
+ overflow: hidden;
+ }
+ .cta-band__grid-overlay {
+ position: absolute;
+ inset: 0;
+ background-image:
+ linear-gradient(rgba(0,0,0,0.06) 1px, transparent 1px),
+ linear-gradient(90deg, rgba(0,0,0,0.06) 1px, transparent 1px);
+ background-size: 48px 48px;
+ pointer-events: none;
+ }
+ .cta-band__inner {
+ position: relative;
+ z-index: 1;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 40px;
+ flex-wrap: wrap;
+ }
+ .cta-band__title {
+ font-family: var(--font-display);
+ font-size: clamp(36px, 5vw, 64px);
+ color: var(--black);
+ line-height: 0.95;
+ }
+ .cta-band__sub { font-size: 16px; color: rgba(0,0,0,0.65); margin-top: 12px; }
+ .btn--dark {
+ background: var(--black);
+ color: var(--green);
+ font-family: var(--font-mono);
+ font-size: 13px;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ padding: 16px 36px;
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ transition: var(--transition);
+ }
+ .btn--dark:hover { background: #0A0A0A; }
+
+ /* ── FOOTER ─────────────────────────────────────────── */
+ .footer {
+ border-top: 1px solid var(--border);
+ padding: 64px 0 32px;
+ }
+ .footer__grid {
+ display: grid;
+ grid-template-columns: 2fr 1fr 1fr 1fr;
+ gap: 48px;
+ margin-bottom: 48px;
+ }
+ .footer__brand { display: flex; flex-direction: column; gap: 16px; }
+ .footer__tagline { font-size: 14px; color: var(--silver); line-height: 1.6; max-width: 280px; }
+ .footer__socials { display: flex; gap: 12px; margin-top: 8px; }
+ .footer__social {
+ width: 36px;
+ height: 36px;
+ border: 1px solid var(--border);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: var(--silver);
+ transition: border-color var(--transition), color var(--transition);
+ }
+ .footer__social:hover { border-color: var(--green); color: var(--green); }
+ .footer__col-title {
+ font-family: var(--font-mono);
+ font-size: 11px;
+ letter-spacing: 0.15em;
+ color: var(--green);
+ text-transform: uppercase;
+ margin-bottom: 20px;
+ }
+ .footer__links { display: flex; flex-direction: column; gap: 12px; }
+ .footer__link { font-size: 14px; color: var(--silver); transition: color var(--transition); }
+ .footer__link:hover { color: var(--white); }
+ .footer__bottom {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding-top: 32px;
+ border-top: 1px solid var(--border);
+ flex-wrap: wrap;
+ gap: 16px;
+ }
+ .footer__copy {
+ font-family: var(--font-mono);
+ font-size: 11px;
+ color: var(--silver);
+ letter-spacing: 0.08em;
+ }
+ .footer__legal { display: flex; gap: 24px; }
+ .footer__legal-link {
+ font-family: var(--font-mono);
+ font-size: 11px;
+ color: var(--silver);
+ letter-spacing: 0.08em;
+ transition: color var(--transition);
+ }
+ .footer__legal-link:hover { color: var(--white); }
+
+ /* ── CONTACT MODAL ──────────────────────────────────── */
+ .modal-overlay {
+ display: none;
+ position: fixed;
+ inset: 0;
+ z-index: 200;
+ background: rgba(0,0,0,0.85);
+ backdrop-filter: blur(6px);
+ align-items: center;
+ justify-content: center;
+ }
+ .modal-overlay.open { display: flex; }
+ .modal {
+ background: var(--card);
+ border: 1px solid var(--border);
+ width: 100%;
+ max-width: 560px;
+ padding: 48px;
+ position: relative;
+ max-height: 90vh;
+ overflow-y: auto;
+ }
+ .modal__close {
+ position: absolute;
+ top: 20px; right: 20px;
+ color: var(--silver);
+ transition: color var(--transition);
+ display: flex;
+ }
+ .modal__close:hover { color: var(--green); }
+ .modal__title { font-family: var(--font-display); font-size: 36px; margin-bottom: 8px; }
+ .modal__sub { font-size: 14px; color: var(--silver); margin-bottom: 32px; }
+ .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+ .form-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; color: var(--silver); text-transform: uppercase; }
+ .form-input, .form-select, .form-textarea {
+ background: var(--black);
+ border: 1px solid var(--border);
+ color: var(--white);
+ padding: 12px 16px;
+ font-family: var(--font-body);
+ font-size: 15px;
+ border-radius: var(--radius);
+ transition: border-color var(--transition);
+ width: 100%;
+ }
+ .form-input:focus, .form-select:focus, .form-textarea:focus {
+ outline: none;
+ border-color: var(--green);
+ }
+ .form-select { appearance: none; cursor: pointer; }
+ .form-textarea { min-height: 100px; resize: vertical; }
+ .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+ /* ── SCROLL ANIMATIONS ──────────────────────────────── */
+ .reveal {
+ opacity: 0;
+ transform: translateY(28px);
+ transition: opacity 0.6s ease, transform 0.6s ease;
+ }
+ .reveal.visible {
+ opacity: 1;
+ transform: translateY(0);
+ }
+ .reveal-delay-1 { transition-delay: 0.1s; }
+ .reveal-delay-2 { transition-delay: 0.2s; }
+ .reveal-delay-3 { transition-delay: 0.3s; }
+
+ /* ── RESPONSIVE ─────────────────────────────────────── */
+ @media (max-width: 1024px) {
+ .services__grid { grid-template-columns: repeat(2, 1fr); }
+ .membership__grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+ .footer__grid { grid-template-columns: 1fr 1fr; }
+ }
+ @media (max-width: 768px) {
+ .section { padding: 64px 0; }
+ .nav__links, .nav__cta .btn--outline { display: none; }
+ .nav__hamburger { display: flex; }
+ .hero__stat-strip { grid-template-columns: repeat(2, 1fr); }
+ .method__grid { grid-template-columns: 1fr; gap: 48px; }
+ .services__grid { grid-template-columns: 1fr; }
+ .membership__grid { grid-template-columns: 1fr; }
+ .testimonials__grid { grid-template-columns: 1fr; }
+ .cta-band__inner { flex-direction: column; align-items: flex-start; }
+ .footer__grid { grid-template-columns: 1fr; }
+ .footer__bottom { flex-direction: column; align-items: flex-start; }
+ .form-row { grid-template-columns: 1fr; }
+ .modal { padding: 32px 24px; }
+ }
+ @media (max-width: 480px) {
+ .hero__stat-strip { grid-template-columns: 1fr 1fr; }
+ .hero__actions { flex-direction: column; }
+ .hero__actions .btn { width: 100%; justify-content: center; }
+ }
+
+ /* ── REDUCED MOTION ─────────────────────────────────── */
+ @media (prefers-reduced-motion: reduce) {
+ *, *::before, *::after { animation: none !important; transition: none !important; }
+ }
+ </style>
 </head>
-<body class="bg-dark text-slate-100 font-sans selection:bg-neon selection:text-dark">
+<body>
 
-    <!-- Sticky Navbar -->
-    <nav class="fixed top-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-extrabold tracking-tighter text-white">VALOR<span class="text-neon">.</span></span>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#mission" class="text-sm font-medium hover:text-neon transition-colors">Mission</a>
-                    <a href="#method" class="text-sm font-medium hover:text-neon transition-colors">Method</a>
-                    <a href="#services" class="text-sm font-medium hover:text-neon transition-colors">Services</a>
-                    <button onclick="toggleModal()" class="bg-neon text-dark px-6 py-2.5 rounded-sm font-bold text-sm tracking-wide neon-button-glow transition-all uppercase">Book Now</button>
-                </div>
+<!-- ═══════════════════════════════════════════════════════
+ NAV
+═══════════════════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+ <div class="container">
+ <div class="nav__inner">
+ <a href="#" class="nav__logo" aria-label="Valor Performance Home">
+ <svg class="nav__shield" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ <path d="M18 2L4 8v10c0 8.5 5.5 16 14 18 8.5-2 14-9.5 14-18V8L18 2z" fill="#C8F400" fill-opacity="0.12" stroke="#C8F400" stroke-width="1.2"/>
+ <circle cx="10" cy="17" r="1.2" fill="#C8F400"/>
+ <circle cx="14" cy="13" r="1.2" fill="#C8F400"/>
+ <circle cx="18" cy="21" r="1.2" fill="#C8F400"/>
+ <circle cx="22" cy="14" r="1.2" fill="#C8F400"/>
+ <circle cx="26" cy="19" r="1.2" fill="#C8F400"/>
+ <path d="M10 17 L14 13 L18 21 L22 14 L26 19" stroke="#C8F400" stroke-width="0.8" stroke-opacity="0.6" fill="none"/>
+ <path d="M14 26l.5 1.5H16l-1.3.95.5 1.55L14 29l-1.2 1 .5-1.55L12 27.5h1.5z" fill="#C8F400" fill-opacity="0.8"/>
+ <path d="M18 26l.5 1.5H20l-1.3.95.5 1.55L18 29l-1.2 1 .5-1.55L16 27.5h1.5z" fill="#C8F400"/>
+ <path d="M22 26l.5 1.5H24l-1.3.95.5 1.55L22 29l-1.2 1 .5-1.55L20 27.5h1.5z" fill="#C8F400" fill-opacity="0.8"/>
+ </svg>
+ <span class="nav__wordmark" style="font-size: 16px; letter-spacing: 0.04em;">VALOR<br><span>PERFORMANCE</span></span>
+ </a>
 
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden">
-                    <button id="menu-btn" class="text-white p-2">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
+ <ul class="nav__links">
+ <li><a href="#method" class="nav__link">The Method</a></li>
+ <li><a href="#services" class="nav__link">Services</a></li>
+ <li><a href="#membership" class="nav__link">Membership</a></li>
+ <li><a href="#virtual" class="nav__link">Virtual</a></li>
+ <li><a href="#testimonials" class="nav__link">Results</a></li>
+ </ul>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-dark border-b border-white/5 px-4 pt-2 pb-6 space-y-4">
-            <a href="#mission" class="block text-lg py-2 hover:text-neon">Mission</a>
-            <a href="#method" class="block text-lg py-2 hover:text-neon">Method</a>
-            <a href="#services" class="block text-lg py-2 hover:text-neon">Services</a>
-            <button onclick="toggleModal()" class="w-full bg-neon text-dark py-4 rounded-sm font-bold neon-button-glow uppercase">Book Consultation</button>
-        </div>
-    </nav>
+ <div class="nav__cta">
+ <a href="#services" class="btn btn--outline">View Services</a>
+ <button class="btn btn--primary" onclick="openModal()">Book a Session</button>
+ <button class="nav__hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+ <i data-lucide="menu" width="22" height="22"></i>
+ </button>
+ </div>
+ </div>
+ </div>
+</nav>
 
-    <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <div class="absolute inset-0 grid-bg opacity-30"></div>
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-neon/10 rounded-full blur-[120px]"></div>
-        
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-            <div class="inline-block px-4 py-1 border border-neon/30 rounded-full text-neon text-xs font-bold tracking-widest uppercase mb-6 bg-neon/5">
-                Optimize Your Human Potential
-            </div>
-            <h1 class="text-5xl md:text-8xl font-extrabold tracking-tight mb-6 text-white leading-none">
-                Achieve Full <br><span class="text-neon neon-text-glow">Human Optimization</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Veteran-Owned <span class="mx-2 text-neon/30">•</span> Precision Nutrition <span class="mx-2 text-neon/30">•</span> Intentional Training <span class="mx-2 text-neon/30">•</span> Advanced Recovery
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <button onclick="toggleModal()" class="bg-neon text-dark px-10 py-5 rounded-sm font-black text-lg tracking-wider neon-button-glow transition-all uppercase">
-                    Book Your Consultation
-                </button>
-                <a href="#method" class="px-10 py-5 border border-white/10 rounded-sm font-bold text-lg hover:bg-white/5 transition-all uppercase">
-                    The VALOR Method
-                </a>
-            </div>
-        </div>
-    </section>
+<div class="nav__mobile" id="mobileMenu">
+ <a href="#method" class="nav__link" onclick="toggleMenu()">The Method</a>
+ <a href="#services" class="nav__link" onclick="toggleMenu()">Services</a>
+ <a href="#membership" class="nav__link" onclick="toggleMenu()">Membership</a>
+ <a href="#virtual" class="nav__link" onclick="toggleMenu()">Virtual</a>
+ <a href="#testimonials" class="nav__link" onclick="toggleMenu()">Results</a>
+ <div class="divider"></div>
+ <button class="btn btn--primary" onclick="toggleMenu(); openModal();">Book a Session</button>
+</div>
 
-    <!-- Our Mission -->
-    <section id="mission" class="py-32 bg-dark/50">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="h-1 w-12 bg-neon"></div>
-                        <span class="text-neon font-bold tracking-widest uppercase text-sm">Our Mission</span>
-                    </div>
-                    <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-white leading-tight">
-                        Veterans Achieving <br>Lasting Optimization <br>& Recovery
-                    </h2>
-                </div>
-                <div class="space-y-6">
-                    <p class="text-xl text-slate-300 leading-relaxed">
-                        Although founded by a disabled U.S. veteran, Valor Performance & Wellness serves athletes, professionals, and everyday individuals seeking peak performance and longevity.
-                    </p>
-                    <p class="text-lg text-slate-400">
-                        We combine science-backed methods with personalized protocols to help you optimize body, mind, and performance through intentional, data-driven strategies.
-                    </p>
-                    <div class="pt-4 flex items-center gap-4">
-                        <div class="p-3 bg-white/5 rounded-lg border border-white/10">
-                            <svg class="w-8 h-8 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
-                        </div>
-                        <span class="font-bold text-sm tracking-widest uppercase">Veteran Owned & Operated</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- The VALOR Method -->
-    <section id="method" class="py-32 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6">The VALOR Method</h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">A personalized, non-cookie-cutter approach built on your unique biometrics and performance goals.</p>
-            </div>
+<!-- ═══════════════════════════════════════════════════════
+ HERO
+═══════════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+ <div class="hero__bg">
+ <div class="hero__grid"></div>
+ <div class="hero__pulse"></div>
+ <div class="hero__pulse"></div>
+ <div class="hero__pulse"></div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Pillar 1 -->
-                <div class="p-8 border border-white/5 bg-white/[0.02] hover:border-neon/30 transition-all group">
-                    <div class="mb-6 text-neon group-hover:scale-110 transition-transform duration-500">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.628.293a2 2 0 01-.815.171h-.436a2 2 0 01-.815-.171l-.628-.293a6 6 0 00-3.86-.517l-2.387.477a2 2 0 00-1.022.547l-1.16 1.16a2 2 0 000 2.828l1.16 1.16a2 2 0 001.022.547l2.387.477a6 6 0 003.86-.517l.628-.293a2 2 0 01.815-.171h.436a2 2 0 01.815.171l.628.293a6 6 0 003.86.517l2.387-.477a2 2 0 001.022-.547l1.16-1.16a2 2 0 000-2.828l-1.16-1.16z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Precision Metabolic Nutrition</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Fueling based on metabolic rate and biometric data for peak energy and body composition.</p>
-                </div>
+ <svg class="hero__ekg" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ <polyline
+ points="0,30 120,30 150,30 160,5 170,55 180,30 210,30 260,30 270,15 280,30 320,30 400,30 430,2 445,58 460,30 500,30 560,30 570,18 580,30 640,30 720,30 750,8 760,52 770,30 800,30 860,30 880,22 890,30 960,30 1040,30 1065,5 1080,55 1095,30 1120,30 1200,30 1220,20 1230,30 1300,30 1440,30"
+ fill="none" stroke="#C8F400" stroke-width="1.5"/>
+ </svg>
+ </div>
 
-                <!-- Pillar 2 -->
-                <div class="p-8 border border-white/5 bg-white/[0.02] hover:border-neon/30 transition-all group">
-                    <div class="mb-6 text-neon group-hover:scale-110 transition-transform duration-500">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Intentional Strength Training</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Systematic programming designed to build resilient systems and functional capacity.</p>
-                </div>
+ <div class="container">
+ <div class="hero__content">
+ <div class="hero__eyebrow">
+ <div class="hero__dot"></div>
+ <span class="label" style="margin:0">Saint Augustine, FL · Virtual Nationwide</span>
+ </div>
 
-                <!-- Pillar 3 -->
-                <div class="p-8 border border-white/5 bg-white/[0.02] hover:border-neon/30 transition-all group">
-                    <div class="mb-6 text-neon group-hover:scale-110 transition-transform duration-500">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Lifestyle Optimization</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Mastering the margins: Sleep, stress management, and daily habits for longevity.</p>
-                </div>
+ <h1 class="h1 hero__title">
+ <span class="line1">OPTIMIZE</span><br>
+ <span class="line2">YOUR DATA.</span><br>
+ <span class="line1">OWN YOUR</span><br>
+ <span class="line2">PERFORMANCE.</span>
+ </h1>
 
-                <!-- Pillar 4 -->
-                <div class="p-8 border border-white/5 bg-white/[0.02] hover:border-neon/30 transition-all group">
-                    <div class="mb-6 text-neon group-hover:scale-110 transition-transform duration-500">
-                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Advanced Recovery Methods</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Utilizing cutting-edge science to accelerate repair and reset the nervous system.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <p class="body-lg hero__subtitle">
+ Precision biometric testing, personalized metabolic nutrition, intentional strength training and evidence-based protocols for maximum optimization.
+ </p>
 
-    <!-- Our Services -->
-    <section id="services" class="py-32 bg-dark/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-                <div class="max-w-2xl">
-                    <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6">Our Services</h2>
-                    <p class="text-slate-400 text-lg">Integrated performance solutions tailored to your unique biological needs.</p>
-                </div>
-                <button onclick="toggleModal()" class="text-neon border border-neon/50 px-8 py-3 hover:bg-neon hover:text-dark transition-all font-bold uppercase tracking-widest text-xs">View All Protocols</button>
-            </div>
+ <div class="hero__actions">
+ <button class="btn btn--primary" onclick="openModal()">
+ <i data-lucide="calendar-check" width="16" height="16"></i>
+ Book Your Assessment
+ </button>
+ <a href="#method" class="btn btn--outline">
+ <i data-lucide="arrow-down" width="16" height="16"></i>
+ Explore the Method
+ </a>
+ </div>
+ </div>
+ </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-dark border border-white/5 p-10 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-24 h-24 bg-neon/5 -mr-12 -mt-12 rounded-full group-hover:bg-neon/20 transition-all duration-500"></div>
-                    <h3 class="text-2xl font-bold text-white mb-6">Metabolic Precision Nutrition</h3>
-                    <ul class="space-y-4 mb-10 text-slate-400 text-sm">
-                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Biometric Data Analysis</li>
-                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Personalized Fueling Maps</li>
-                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Nutrient Timing Protocols</li>
-                    </ul>
-                    <button onclick="toggleModal()" class="text-neon font-bold text-sm uppercase tracking-widest border-b-2 border-neon/20 hover:border-neon pb-1 transition-all">Book Now</button>
-                </div>
+ <div class="hero__stat-strip">
+ <div class="hero__stat">
+ <span class="hero__stat-num">12+</span>
+ <span class="hero__stat-label">Biomarkers Tracked</span>
+ </div>
+ <div class="hero__stat">
+ <span class="hero__stat-num">98%</span>
+ <span class="hero__stat-label">Client Retention</span>
+ </div>
+ <div class="hero__stat">
+ <span class="hero__stat-num">50</span>
+ <span class="hero__stat-label">States Served Virtually</span>
+ </div>
+ <div class="hero__stat">
+ <span class="hero__stat-num">3×</span>
+ <span class="hero__stat-label">Average Performance Gain</span>
+ </div>
+ </div>
+</section>
 
-                <!-- Service 2 -->
-                <div class="bg-dark border border-white/5 p-10 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-24 h-24 bg-neon/5 -mr-12 -mt-12 rounded-full group-hover:bg-neon/20 transition-all duration-500"></div>
-                    <h3 class="text-2xl font-bold text-white mb-6">Lifestyle Optimization</h3>
-                    <ul class="space-y-4 mb-10 text-slate-400 text-sm">
-                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Sleep Architecture Audit</li>
-                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Circadian Rhythm Alignment</li>
-                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Stress Management Systems</li>
-                    </ul>
-                    <button onclick="toggleModal()" class="text-neon font-bold text-sm uppercase tracking-widest border-b-2 border-neon/20 hover:border-neon pb-1 transition-all">Book Now</button>
-                </div>
 
-                <!-- Service 3 -->
-                <div class="bg-dark border border-white/5 p-10 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 w-24 h-24 bg-neon/5 -mr-12 -mt-12 rounded-full group-hover:bg-neon/20 transition-all duration-500"></div>
-                    <h3 class="text-2xl font-bold text-white mb-6">Advanced Recovery</h3>
-                    <ul class="space-y-4 mb-10 text-slate-400 text-sm">
-                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Red Light Therapy</li>
-                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Infrared Sauna Protocols</li>
-                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-neon rounded-full"></span>Cold Exposure / Ice Baths</li>
-                    </ul>
-                    <button onclick="toggleModal()" class="text-neon font-bold text-sm uppercase tracking-widest border-b-2 border-neon/20 hover:border-neon pb-1 transition-all">Book Now</button>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ═══════════════════════════════════════════════════════
+ MARQUEE
+═══════════════════════════════════════════════════════ -->
+<div class="marquee-bar" aria-hidden="true">
+ <div class="marquee-inner" id="marqueeInner">
+ <span>VO2 Max Testing</span>
+ <span>Resting Metabolic Rate</span>
+ <span>Body Composition Analysis</span>
+ <span>Lactate Threshold</span>
+ <span>HRV Optimization</span>
+ <span>Nutrition Periodization</span>
+ <span>Virtual Coaching</span>
+ <span>Strength Programming</span>
+ <span>VO2 Max Testing</span>
+ <span>Resting Metabolic Rate</span>
+ <span>Body Composition Analysis</span>
+ <span>Lactate Threshold</span>
+ <span>HRV Optimization</span>
+ <span>Nutrition Periodization</span>
+ <span>Virtual Coaching</span>
+ <span>Strength Programming</span>
+ </div>
+</div>
 
-    <!-- CTA Section -->
-    <section class="py-32 relative overflow-hidden">
-        <div class="absolute inset-0 bg-neon/5"></div>
-        <div class="max-w-4xl mx-auto px-4 text-center relative">
-            <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-8">Ready to Level Up?</h2>
-            <p class="text-slate-300 text-xl mb-12">Take the first step toward a data-driven transformation.</p>
-            <button onclick="toggleModal()" class="bg-neon text-dark px-12 py-6 rounded-sm font-black text-xl tracking-widest neon-button-glow transition-all uppercase">
-                Start Your Journey
-            </button>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-black py-20 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                <div class="lg:col-span-2">
-                    <span class="text-2xl font-extrabold tracking-tighter text-white mb-6 block">VALOR<span class="text-neon">.</span></span>
-                    <p class="text-slate-500 max-w-sm mb-8 leading-relaxed">
-                        Precision performance for those who demand more from themselves. Veteran founded, science-backed.
-                    </p>
-                    <div class="flex space-x-6">
-                        <a href="#" class="text-slate-500 hover:text-neon transition-colors">
-                            <span class="sr-only">Instagram</span>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                        </a>
-                        <a href="#" class="text-slate-500 hover:text-neon transition-colors">
-                            <span class="sr-only">Twitter</span>
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Navigation</h4>
-                    <ul class="space-y-4 text-slate-500 text-sm">
-                        <li><a href="#" class="hover:text-neon transition-colors">Home</a></li>
-                        <li><a href="#mission" class="hover:text-neon transition-colors">Mission</a></li>
-                        <li><a href="#method" class="hover:text-neon transition-colors">The Method</a></li>
-                        <li><a href="#services" class="hover:text-neon transition-colors">Services</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Legal</h4>
-                    <ul class="space-y-4 text-slate-500 text-sm">
-                        <li><a href="#" class="hover:text-neon transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-neon transition-colors">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-white/5 pt-10">
-                <p class="text-slate-600 text-xs leading-relaxed italic">
-                    Valor Performance & Wellness is an educational company providing information on precision nutrition, lifestyle optimization, and recovery protocols. The content on this website is for informational and educational purposes only and is not intended as medical advice. Always consult with a qualified physician before beginning any new nutrition, training, or recovery program.
-                </p>
-                <div class="mt-8 flex justify-between items-center text-[10px] uppercase tracking-widest text-slate-700">
-                    <p>&copy; 2026 VALOR PERFORMANCE & WELLNESS. ALL RIGHTS RESERVED.</p>
-                    <p>DESIGNED FOR HUMAN OPTIMIZATION</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+<!-- ═══════════════════════════════════════════════════════
+ THE METHOD
+═══════════════════════════════════════════════════════ -->
+<section class="section method" id="method">
+ <div class="container">
+ <div class="method__grid">
+ <div>
+ <p class="label reveal">The Valor Method</p>
+ <h2 class="h2 reveal reveal-delay-1">Science First.<br>Strategy Always.</h2>
+ <p class="body-lg reveal reveal-delay-2" style="margin-top:20px">
+ Generic fitness programs fail because they ignore the most important variable: you. The Valor Method begins with your biology and builds from there — no guesswork, no templates.
+ </p>
 
-    <!-- Booking Modal -->
-    <div id="booking-modal" class="fixed inset-0 z-[60] flex items-center justify-center hidden">
-        <div class="absolute inset-0 bg-dark/95 backdrop-blur-sm" onclick="toggleModal()"></div>
-        <div class="relative bg-dark border border-white/10 w-full max-w-lg mx-4 p-8 md:p-12 neon-border-glow">
-            <button onclick="toggleModal()" class="absolute top-4 right-4 text-slate-500 hover:text-white">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
-            </button>
-            <h2 class="text-3xl font-extrabold text-white mb-2">Book Consultation</h2>
-            <p class="text-slate-400 mb-8">Tell us about your goals. We'll reach out within 24 hours.</p>
-            
-            <form id="booking-form" class="space-y-4">
-                <div>
-                    <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">Full Name</label>
-                    <input type="text" required class="w-full bg-white/5 border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-neon transition-colors" placeholder="John Doe">
-                </div>
-                <div>
-                    <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">Email Address</label>
-                    <input type="email" required class="w-full bg-white/5 border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-neon transition-colors" placeholder="john@example.com">
-                </div>
-                <div>
-                    <label class="block text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">What is your primary goal?</label>
-                    <select class="w-full bg-white/5 border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-neon transition-colors">
-                        <option class="bg-dark">Precision Nutrition</option>
-                        <option class="bg-dark">Strength Optimization</option>
-                        <option class="bg-dark">Lifestyle & Longevity</option>
-                        <option class="bg-dark">Recovery Protocols</option>
-                    </select>
-                </div>
-                <button type="submit" class="w-full bg-neon text-dark py-4 font-black uppercase tracking-widest mt-6 neon-button-glow transition-all">Submit Request</button>
-            </form>
-        </div>
-    </div>
+ <div class="method__steps">
+ <div class="method__step reveal">
+ <span class="method__step-num">01</span>
+ <div>
+ <div class="method__step-title">Measure</div>
+ <p class="body-sm">Clinical-grade biometric baselines across metabolic, cardiovascular, and body composition markers.</p>
+ </div>
+ </div>
+ <div class="method__step reveal reveal-delay-1">
+ <span class="method__step-num">02</span>
+ <div>
+ <div class="method__step-title">Analyze</div>
+ <p class="body-sm">Data interpretation by certified professionals using evidence-based frameworks — not algorithms.</p>
+ </div>
+ </div>
+ <div class="method__step reveal reveal-delay-2">
+ <span class="method__step-num">03</span>
+ <div>
+ <div class="method__step-title">Execute</div>
+ <p class="body-sm">A fully individualized training and nutrition protocol derived from your specific results, with clear intent and measurable milestones.</p>
+ </div>
+ </div>
+ <div class="method__step reveal reveal-delay-3">
+ <span class="method__step-num">04</span>
+ <div>
+ <div class="method__step-title">Reassess</div>
+ <p class="body-sm">Scheduled re-testing tracks adaptation, ensures progress, and refines the protocol as your biology changes.</p>
+ </div>
+ </div>
+ </div>
+ </div>
 
-    <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+ <div class="method__visual">
+ <div class="label" style="text-align:right">Live Client Dashboard</div>
+ <div class="metric-card reveal">
+ <div class="metric-card__icon">
+ <i data-lucide="wind" width="20" height="20"></i>
+ </div>
+ <div>
+ <div class="metric-card__label">VO2 Max</div>
+ <div class="metric-card__value">58.4 <small style="font-size:14px;color:var(--silver)">ml/kg/min</small></div>
+ </div>
+ <div class="metric-card__bar"><div class="metric-card__fill" data-width="79" style="width:79%"></div></div>
+ </div>
+ <div class="metric-card reveal reveal-delay-1">
+ <div class="metric-card__icon">
+ <i data-lucide="flame" width="20" height="20"></i>
+ </div>
+ <div>
+ <div class="metric-card__label">Resting Metabolic Rate</div>
+ <div class="metric-card__value">2,140 <small style="font-size:14px;color:var(--silver)">kcal/day</small></div>
+ </div>
+ <div class="metric-card__bar"><div class="metric-card__fill" data-width="65" style="width:65%"></div></div>
+ </div>
+ <div class="metric-card reveal reveal-delay-2">
+ <div class="metric-card__icon">
+ <i data-lucide="activity" width="20" height="20"></i>
+ </div>
+ <div>
+ <div class="metric-card__label">Fat Oxidation Peak</div>
+ <div class="metric-card__value">0.68 <small style="font-size:14px;color:var(--silver)">g/min</small></div>
+ </div>
+ <div class="metric-card__bar"><div class="metric-card__fill" data-width="88" style="width:88%"></div></div>
+ </div>
+ <div class="metric-card reveal reveal-delay-3">
+ <div class="metric-card__icon">
+ <i data-lucide="heart-pulse" width="20" height="20"></i>
+ </div>
+ <div>
+ <div class="metric-card__label">HRV Score</div>
+ <div class="metric-card__value">72 <small style="font-size:14px;color:var(--silver)">ms</small></div>
+ </div>
+ <div class="metric-card__bar"><div class="metric-card__fill" data-width="72" style="width:72%"></div></div>
+ </div>
+ <div class="metric-card reveal">
+ <div class="metric-card__icon">
+ <i data-lucide="layers" width="20" height="20"></i>
+ </div>
+ <div>
+ <div class="metric-card__label">Lean Mass</div>
+ <div class="metric-card__value">83.2 <small style="font-size:14px;color:var(--silver)">%</small></div>
+ </div>
+ <div class="metric-card__bar"><div class="metric-card__fill" data-width="83" style="width:83%"></div></div>
+ </div>
+ </div>
+ </div>
+</section>
 
-        // Modal Toggle
-        const modal = document.getElementById('booking-modal');
-        function toggleModal() {
-            modal.classList.toggle('hidden');
-            document.body.classList.toggle('mobile-menu-open');
-        }
 
-        // Form Submit Handler
-        document.getElementById('booking-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Consultation request received! We will be in touch soon.');
-            toggleModal();
-        });
+<!-- ═══════════════════════════════════════════════════════
+ SERVICES
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="services">
+ <div class="container">
+ <div class="services__header">
+ <div>
+ <p class="label reveal">Testing & Services</p>
+ <h2 class="h2 reveal reveal-delay-1">What We Measure.<br>How We Help.</h2>
+ </div>
+ <p class="body-lg reveal" style="max-width:360px">Every service is a precision instrument. Combined, they give you a complete biological performance profile.</p>
+ </div>
 
-        // Close mobile menu on link click
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
+ <div class="services__grid">
+
+ <div class="service-card reveal">
+ <i data-lucide="clipboard-list" class="service-card__icon" width="48" height="48"></i>
+ <span class="service-card__tag">The Foundation</span>
+ <h3 class="service-card__title">Valor Method Briefing</h3>
+ <p class="service-card__desc">Your initial consultation. A deep dive into all your systems — nutrition habits, sleep quality, recovery patterns, stress management, and lifestyle factors.</p>
+ <a href="#" class="service-card__link" onclick="openModal(); return false;">Schedule Briefing <i data-lucide="arrow-right" width="12" height="12"></i></a>
+ </div>
+
+ <div class="service-card reveal reveal-delay-1">
+ <i data-lucide="activity" class="service-card__icon" width="48" height="48"></i>
+ <span class="service-card__tag">Cardiovascular</span>
+ <h3 class="service-card__title">VO2 Max Testing</h3>
+ <p class="service-card__desc">Gold-standard maximal oxygen uptake test using metabolic cart analysis. Identifies true aerobic capacity and training zones.</p>
+ <a href="#" class="service-card__link" onclick="openModal(); return false;">Schedule Test <i data-lucide="arrow-right" width="12" height="12"></i></a>
+ </div>
+
+ <div class="service-card reveal reveal-delay-2">
+ <i data-lucide="zap" class="service-card__icon" width="48" height="48"></i>
+ <span class="service-card__tag">Metabolic</span>
+ <h3 class="service-card__title">Resting Metabolic Rate</h3>
+ <p class="service-card__desc">Indirect calorimetry measurement of your true daily caloric need. Eliminates guesswork from nutrition planning.</p>
+ <a href="#" class="service-card__link" onclick="openModal(); return false;">Schedule Test <i data-lucide="arrow-right" width="12" height="12"></i></a>
+ </div>
+
+ <div class="service-card reveal">
+ <i data-lucide="layers" class="service-card__icon" width="48" height="48"></i>
+ <span class="service-card__tag">Composition</span>
+ <h3 class="service-card__title">Body Composition Analysis</h3>
+ <p class="service-card__desc">Multi-segment assessment of fat mass, lean mass, visceral fat, and bone density.</p>
+ <a href="#" class="service-card__link" onclick="openModal(); return false;">Schedule Test <i data-lucide="arrow-right" width="12" height="12"></i></a>
+ </div>
+
+ <div class="service-card reveal reveal-delay-1">
+ <i data-lucide="utensils" class="service-card__icon" width="48" height="48"></i>
+ <span class="service-card__tag">Nutrition</span>
+ <h3 class="service-card__title">Nutrition Optimization</h3>
+ <p class="service-card__desc">Caloric targets and macro distribution built from your RMR and training load — not population averages.</p>
+ <a href="#" class="service-card__link" onclick="openModal(); return false;">Learn More <i data-lucide="arrow-right" width="12" height="12"></i></a>
+ </div>
+
+ <div class="service-card reveal reveal-delay-2">
+ <i data-lucide="dumbbell" class="service-card__icon" width="48" height="48"></i>
+ <span class="service-card__tag">Performance</span>
+ <h3 class="service-card__title">Strength Training</h3>
+ <p class="service-card__desc">Periodized resistance training designed around your profile, recovery capacity, and goals.</p>
+ <a href="#" class="service-card__link" onclick="openModal(); return false;">Learn More <i data-lucide="arrow-right" width="12" height="12"></i></a>
+ </div>
+
+ </div>
+ </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+ MEMBERSHIP
+═══════════════════════════════════════════════════════ -->
+<section class="section membership" id="membership">
+ <div class="container">
+ <p class="label reveal">Membership Tiers</p>
+ <h2 class="h2 reveal reveal-delay-1">Your Level<br>of Commitment.</h2>
+ <p class="body-lg reveal reveal-delay-2" style="max-width:520px; margin-top:16px">Every tier includes real data, real interpretation, and a real protocol.</p>
+
+ <div class="membership__grid">
+
+ <div class="tier-card reveal">
+ <div>
+ <div class="tier-card__name">FOUNDATION</div>
+ <p class="body-sm" style="margin-top:8px">Single assessment entry.</p>
+ </div>
+ <div class="tier-card__price">
+ <span class="tier-card__amount">$199</span>
+ <span class="tier-card__period">/ session</span>
+ </div>
+ <ul class="tier-card__features">
+ <li class="tier-card__feature"><i data-lucide="check" class="tier-card__check" width="15" height="15"></i> <span>Valor Method Briefing</span></li>
+ <li class="tier-card__feature"><i data-lucide="check" class="tier-card__check" width="15" height="15"></i> <span>Full systems assessment</span></li>
+ <li class="tier-card__feature"><i data-lucide="check" class="tier-card__check" width="15" height="15"></i> <span>30-min results consultation</span></li>
+ </ul>
+ <button class="btn btn--outline" style="width:100%; justify-content:center" onclick="openModal()">Get Started</button>
+ </div>
+
+ <div class="tier-card reveal reveal-delay-1">
+ <div>
+ <div class="tier-card__name">OPTIMUM</div>
+ <p class="body-sm" style="margin-top:8px">Ongoing optimization quarterly.</p>
+ </div>
+ <div class="tier-card__price">
+ <span class="tier-card__amount">$299</span>
+ <span class="tier-card__period">/ month</span>
+ </div>
+ <ul class="tier-card__features">
+ <li class="tier-card__feature"><i data-lucide="check" class="tier-card__check" width="15" height="15"></i> <span>Everything in Foundation</span></li>
+ <li class="tier-card__feature"><i data-lucide="check" class="tier-card__check" width="15" height="15"></i> <span>Quarterly re-testing</span></li>
+ <li class="tier-card__feature"><i data-lucide="check" class="tier-card__check" width="15" height="15"></i> <span>Bi-weekly coaching</span></li>
+ </ul>
+ <button class="btn btn--outline" style="width:100%; justify-content:center" onclick="openModal()">Join Optimum</button>
+ </div>
+
+ <div class="tier-card tier-card--featured reveal reveal-delay-2">
+ <div>
+ <div class="tier-card__name">PRECISION</div>
+ <p class="body-sm" style="margin-top:8px">Complete biometric profile.</p>
+ </div>
+ <div class="tier-card__price">
+ <span class="tier-card__amount">$399</span>
+ <span class="tier-card__period">/ month</span>
+ </div>
+ <ul class="tier-card__features">
+ <li class="tier-card__feature"><i data-lucide="check" class="tier-card__check" width="15" height="15"></i> <span>Everything in Optimum</span></li>
+ <li class="tier-card__feature"><i data-lucide="check" class="tier-card__check" width="15" height="15"></i> <span>Advanced testing access</span></li>
+ <li class="tier-card__feature"><i data-lucide="check" class="tier-card__check" width="15" height="15"></i> <span>Weekly 1:1 coaching</span></li>
+ </ul>
+ <button class="btn btn--primary" style="width:100%; justify-content:center" onclick="openModal()">Start Precision</button>
+ </div>
+
+ <div class="tier-card reveal reveal-delay-3">
+ <div>
+ <div class="tier-card__name">ELITE</div>
+ <p class="body-sm" style="margin-top:8px">Maximum accountability.</p>
+ </div>
+ <div class="tier-card__price">
+ <span class="tier-card__amount">$499</span>
+ <span class="tier-card__period">/ month</span>
+ </div>
+ <ul class="tier-card__features">
+ <li class="tier-card__feature"><i data-lucide="check" class="tier-card__check" width="15" height="15"></i> <span>Everything in Precision</span></li>
+ <li class="tier-card__feature"><i data-lucide="check" class="tier-card__check" width="15" height="15"></i> <span>Unlimited testing access</span></li>
+ <li class="tier-card__feature"><i data-lucide="check" class="tier-card__check" width="15" height="15"></i> <span>2–3x weekly coaching</span></li>
+ </ul>
+ <button class="btn btn--outline" style="width:100%; justify-content:center" onclick="openModal()">Apply for Elite</button>
+ </div>
+
+ </div>
+ </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+ VIRTUAL SERVICES
+═══════════════════════════════════════════════════════ -->
+<section class="section" id="virtual">
+ <div class="container">
+ <p class="label reveal">Virtual Services</p>
+ <h2 class="h2 reveal reveal-delay-1">Anywhere in<br>the Country.</h2>
+ <p class="body-lg reveal reveal-delay-2" style="margin-top:20px">In-person testing in Saint Augustine, FL. Virtual coaching and check-ins available to all 50 states.</p>
+
+ <div class="virtual__features" style="margin-top:56px">
+ <div class="virtual__feature reveal">
+ <i data-lucide="video" class="virtual__feature-icon" width="22" height="22"></i>
+ <div>
+ <div class="virtual__feature-title">Live Video Consultations</div>
+ <p class="body-sm">1:1 coaching calls with screen-sharing of your biometric data and progress reports.</p>
+ </div>
+ </div>
+ <div class="virtual__feature reveal reveal-delay-1">
+ <i data-lucide="bar-chart-2" class="virtual__feature-icon" width="22" height="22"></i>
+ <div>
+ <div class="virtual__feature-title">Client Performance Dashboard</div>
+ <p class="body-sm">Secure online portal with your full biometric history and coach messages.</p>
+ </div>
+ </div>
+ <div class="virtual__feature reveal reveal-delay-2">
+ <i data-lucide="mail" class="virtual__feature-icon" width="22" height="22"></i>
+ <div>
+ <div class="virtual__feature-title">Asynchronous Coaching</div>
+ <p class="body-sm">Questions answered and protocols adjusted between scheduled calls.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+ TESTIMONIALS
+═══════════════════════════════════════════════════════ -->
+<section class="section testimonials" id="testimonials">
+ <div class="container">
+ <p class="label reveal">Client Results</p>
+ <h2 class="h2 reveal reveal-delay-1">The Data<br>Speaks Clearly.</h2>
+
+ <div class="testimonials__grid">
+
+ <div class="testimonial-card reveal">
+ <div class="testimonial-card__stars">
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ </div>
+ <p class="testimonial-card__text">"After my Valor assessment, I had actual numbers to train against. My VO2 Max went from 48 to 61 in 16 weeks. The most precise coaching I've ever had."</p>
+ <div class="testimonial-card__author">
+ <div class="testimonial-card__avatar">DM</div>
+ <div>
+ <div class="testimonial-card__name">Derek M.</div>
+ <div class="testimonial-card__meta">Triathlete · Elite Member</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="testimonial-card reveal reveal-delay-1">
+ <div class="testimonial-card__stars">
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ </div>
+ <p class="testimonial-card__text">"The RMR test changed everything. I was eating 600 calories under my actual need. My body composition completely transformed when we corrected my nutrition."</p>
+ <div class="testimonial-card__author">
+ <div class="testimonial-card__avatar">SR</div>
+ <div>
+ <div class="testimonial-card__name">Sarah R.</div>
+ <div class="testimonial-card__meta">Virtual Client · 6 Months</div>
+ </div>
+ </div>
+ </div>
+
+ <div class="testimonial-card reveal reveal-delay-2">
+ <div class="testimonial-card__stars">
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ <i data-lucide="star" width="14" height="14" style="fill:currentColor"></i>
+ </div>
+ <p class="testimonial-card__text">"As a 52-year-old executive, I needed a roadmap. Valor gave me one. My visceral fat is down 30%, energy is through the roof, and I'm running faster than at 35."</p>
+ <div class="testimonial-card__author">
+ <div class="testimonial-card__avatar">TK</div>
+ <div>
+ <div class="testimonial-card__name">Tom K.</div>
+ <div class="testimonial-card__meta">Executive · Elite Member</div>
+ </div>
+ </div>
+ </div>
+
+ </div>
+ </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+ CTA BAND
+═══════════════════════════════════════════════════════ -->
+<section class="cta-band">
+ <div class="cta-band__grid-overlay"></div>
+ <div class="container">
+ <div class="cta-band__inner">
+ <div>
+ <h2 class="cta-band__title">Ready to<br>Optimize?</h2>
+ <p class="cta-band__sub">Take the first step toward a data-driven transformation.</p>
+ </div>
+ <button class="btn btn--dark" onclick="openModal()">
+ <i data-lucide="arrow-right" width="16" height="16"></i>
+ Book Your Assessment
+ </button>
+ </div>
+ </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+ FOOTER
+═══════════════════════════════════════════════════════ -->
+<footer class="footer">
+ <div class="container">
+ <div class="footer__grid">
+ <div class="footer__brand">
+ <span style="font-family: var(--font-display); font-size: 20px; letter-spacing: 0.08em;">VALOR<span style="color: var(--green)">.</span></span>
+ <p class="footer__tagline">Precision biometric testing and data-driven performance optimization. Science first. Strategy always.</p>
+ <div class="footer__socials">
+ <a href="#" class="footer__social" aria-label="Instagram"><i data-lucide="instagram" width="18" height="18"></i></a>
+ <a href="#" class="footer__social" aria-label="Twitter"><i data-lucide="twitter" width="18" height="18"></i></a>
+ <a href="#" class="footer__social" aria-label="LinkedIn"><i data-lucide="linkedin" width="18" height="18"></i></a>
+ </div>
+ </div>
+ <div>
+ <h4 class="footer__col-title">Company</h4>
+ <ul class="footer__links">
+ <li><a href="#" class="footer__link">About</a></li>
+ <li><a href="#" class="footer__link">Team</a></li>
+ <li><a href="#" class="footer__link">Contact</a></li>
+ </ul>
+ </div>
+ <div>
+ <h4 class="footer__col-title">Services</h4>
+ <ul class="footer__links">
+ <li><a href="#services" class="footer__link">Testing</a></li>
+ <li><a href="#membership" class="footer__link">Membership</a></li>
+ <li><a href="#virtual" class="footer__link">Virtual Coaching</a></li>
+ </ul>
+ </div>
+ <div>
+ <h4 class="footer__col-title">Legal</h4>
+ <ul class="footer__links">
+ <li><a href="#" class="footer__link">Privacy Policy</a></li>
+ <li><a href="#" class="footer__link">Terms of Service</a></li>
+ </ul>
+ </div>
+ </div>
+
+ <div class="footer__bottom">
+ <p class="footer__copy">&copy; 2026 VALOR PERFORMANCE & WELLNESS. ALL RIGHTS RESERVED.</p>
+ <div class="footer__legal">
+ <a href="#" class="footer__legal-link">PRIVACY</a>
+ <a href="#" class="footer__legal-link">TERMS</a>
+ </div>
+ </div>
+ </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════
+ CONTACT MODAL
+═══════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="contactModal">
+ <div class="modal">
+ <button class="modal__close" onclick="closeModal()">
+ <i data-lucide="x" width="24" height="24"></i>
+ </button>
+ <h2 class="modal__title">Book a Session</h2>
+ <p class="modal__sub">Tell us about your optimization goals. We'll be in touch within 24 hours.</p>
+
+ <form id="contactForm">
+ <div class="form-group">
+ <label class="form-label">Full Name</label>
+ <input type="text" class="form-input" placeholder="John Doe" required>
+ </div>
+ <div class="form-group">
+ <label class="form-label">Email Address</label>
+ <input type="email" class="form-input" placeholder="john@example.com" required>
+ </div>
+ <div class="form-group">
+ <label class="form-label">Phone Number</label>
+ <input type="tel" class="form-input" placeholder="+1 (555) 000-0000">
+ </div>
+ <div class="form-group">
+ <label class="form-label">What's your primary interest?</label>
+ <select class="form-select" required>
+ <option value="">Select an option</option>
+ <option value="vo2">VO2 Max Testing</option>
+ <option value="metabolic">Metabolic Rate Testing</option>
+ <option value="composition">Body Composition</option>
+ <option value="nutrition">Nutrition Optimization</option>
+ <option value="coaching">Virtual Coaching</option>
+ <option value="other">Other</option>
+ </select>
+ </div>
+ <div class="form-group">
+ <label class="form-label">Message</label>
+ <textarea class="form-textarea" placeholder="Tell us about your goals..."></textarea>
+ </div>
+ <button type="submit" class="btn btn--primary" style="width:100%; justify-content:center">Send Request</button>
+ </form>
+ </div>
+</div>
+
+
+<script>
+ // Initialize Lucide icons
+ lucide.createIcons();
+
+ // Nav scroll effect
+ const nav = document.getElementById('nav');
+ window.addEventListener('scroll', () => {
+ if (window.scrollY > 10) nav.classList.add('scrolled');
+ else nav.classList.remove('scrolled');
+ });
+
+ // Mobile menu toggle
+ function toggleMenu() {
+ const menu = document.getElementById('mobileMenu');
+ menu.classList.toggle('open');
+ }
+
+ // Modal functions
+ function openModal() {
+ document.getElementById('contactModal').classList.add('open');
+ document.body.style.overflow = 'hidden';
+ }
+
+ function closeModal() {
+ document.getElementById('contactModal').classList.remove('open');
+ document.body.style.overflow = '';
+ }
+
+ // Form submission
+ document.getElementById('contactForm').addEventListener('submit', (e) => {
+ e.preventDefault();
+ alert('Thank you! We will contact you within 24 hours.');
+ closeModal();
+ document.getElementById('contactForm').reset();
+ });
+
+ // Scroll reveal animations
+ const reveals = document.querySelectorAll('.reveal');
+ function checkReveal() {
+ reveals.forEach(el => {
+ const top = el.getBoundingClientRect().top;
+ if (top < window.innerHeight - 100) {
+ el.classList.add('visible');
+ }
+ });
+ }
+ window.addEventListener('scroll', checkReveal);
+ checkReveal();
+
+ // Close modal on overlay click
+ document.getElementById('contactModal').addEventListener('click', (e) => {
+ if (e.target.id === 'contactModal') closeModal();
+ });
+</script>
+
 </body>
 </html>
