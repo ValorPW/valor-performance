@@ -1500,6 +1500,185 @@
 
 
 <!-- ═══════════════════════════════════════════════════════
+ READY TO OPTIMIZE FORM
+═══════════════════════════════════════════════════════ -->
+<style>
+ .cta-form-section {
+ background: linear-gradient(135deg, var(--black) 0%, var(--dim) 100%);
+ border-top: 1px solid var(--border);
+ padding: 80px 0;
+ }
+ .cta-form-container {
+ max-width: 700px;
+ margin: 0 auto;
+ padding: 0 24px;
+ }
+ .cta-form-header {
+ text-align: center;
+ margin-bottom: 48px;
+ }
+ .cta-form-header p {
+ font-family: var(--font-mono);
+ font-size: 11px;
+ letter-spacing: 0.18em;
+ text-transform: uppercase;
+ color: var(--green);
+ margin-bottom: 12px;
+ }
+ .cta-form-header h2 {
+ font-family: var(--font-display);
+ font-size: clamp(32px, 5vw, 48px);
+ line-height: 1;
+ color: var(--white);
+ margin: 0 0 16px 0;
+ }
+ .cta-form-header .subtitle {
+ font-size: 16px;
+ color: var(--silver);
+ max-width: 500px;
+ margin: 0 auto;
+ line-height: 1.6;
+ }
+ .form-wrapper {
+ background: var(--card);
+ border: 1px solid var(--border);
+ padding: 40px;
+ border-radius: 2px;
+ }
+ .form-group {
+ margin-bottom: 24px;
+ }
+ .form-group:last-of-type {
+ margin-bottom: 32px;
+ }
+ .form-label {
+ display: block;
+ font-family: var(--font-mono);
+ font-size: 11px;
+ letter-spacing: 0.12em;
+ text-transform: uppercase;
+ color: var(--silver);
+ margin-bottom: 8px;
+ }
+ .form-input,
+ .form-select {
+ width: 100%;
+ padding: 12px 16px;
+ background: var(--black);
+ border: 1px solid var(--border);
+ color: var(--white);
+ font-family: var(--font-body);
+ font-size: 15px;
+ border-radius: 2px;
+ transition: border-color var(--transition);
+ }
+ .form-input::placeholder {
+ color: var(--silver);
+ }
+ .form-input:focus,
+ .form-select:focus {
+ outline: none;
+ border-color: var(--green);
+ box-shadow: 0 0 0 3px rgba(200, 244, 0, 0.1);
+ }
+ .form-select {
+ cursor: pointer;
+ appearance: none;
+ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23C8F400' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+ background-repeat: no-repeat;
+ background-position: right 12px center;
+ padding-right: 40px;
+ }
+ .form-select option {
+ background: var(--black);
+ color: var(--white);
+ }
+ .form-submit {
+ width: 100%;
+ padding: 14px 24px;
+ background: var(--green);
+ color: var(--black);
+ font-family: var(--font-mono);
+ font-size: 13px;
+ letter-spacing: 0.1em;
+ text-transform: uppercase;
+ font-weight: 600;
+ border: none;
+ cursor: pointer;
+ border-radius: 2px;
+ transition: var(--transition);
+ }
+ .form-submit:hover {
+ background: #d4ff00;
+ }
+ .form-submit:disabled {
+ background: var(--silver);
+ cursor: not-allowed;
+ opacity: 0.6;
+ }
+ .form-note {
+ font-size: 12px;
+ color: var(--silver);
+ text-align: center;
+ margin-top: 20px;
+ }
+ @media (max-width: 768px) {
+ .cta-form-section { padding: 60px 0; }
+ .form-wrapper { padding: 24px; }
+ .cta-form-header { margin-bottom: 36px; }
+ .cta-form-header h2 { font-size: 28px; }
+ }
+</style>
+
+<section class="cta-form-section">
+ <div class="cta-form-container">
+ <div class="cta-form-header">
+ <p class="label">Let's Get Started</p>
+ <h2>Ready to Optimize?</h2>
+ <p class="subtitle">Tell us about your goals and which services interest you. We'll be in touch within 24 hours to discuss your personalized optimization plan.</p>
+ </div>
+
+ <div class="form-wrapper">
+ <form name="optimize-form" method="POST" netlify netlify-honeypot="bot-field">
+ <input type="hidden" name="bot-field">
+
+ <div class="form-group">
+ <label for="name" class="form-label">Full Name *</label>
+ <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required>
+ </div>
+
+ <div class="form-group">
+ <label for="email" class="form-label">Email Address *</label>
+ <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
+ </div>
+
+ <div class="form-group">
+ <label for="phone" class="form-label">Phone Number *</label>
+ <input type="tel" id="phone" name="phone" class="form-input" placeholder="(904) 555-1234" required>
+ </div>
+
+ <div class="form-group">
+ <label for="service" class="form-label">Service Interested In *</label>
+ <select id="service" name="service" class="form-select" required>
+ <option value="">Select a service...</option>
+ <option value="VO2 Max Testing">VO2 Max Testing</option>
+ <option value="Resting Metabolic Rate">Resting Metabolic Rate</option>
+ <option value="Body Composition Analysis">Body Composition Analysis</option>
+ <option value="Nutrition Optimization">Nutrition Optimization</option>
+ <option value="Strength Training">Strength Training</option>
+ <option value="Virtual Coaching">Virtual Coaching</option>
+ </select>
+ </div>
+
+ <button type="submit" class="form-submit">Send My Information</button>
+
+ <p class="form-note">We respect your privacy. Your information will only be used to contact you about your optimization goals.</p>
+ </form>
+ </div>
+ </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
  FOOTER
 ═══════════════════════════════════════════════════════ -->
 <footer class="footer">
